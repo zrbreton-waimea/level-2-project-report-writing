@@ -56,7 +56,7 @@ See the [docs folder](docs) for a quick-start and guides to usage. In particular
 - [DB Schema](docs/guides/schema.md)
 - [SQL Queries](docs/guides/sqlite.md)
 
-*For easier reading, the docs are hosted as a [GH Pages site](https://waimea-dt.github.io/flask-project-level-2/)*
+*For easier reading, the docs are hosted as a [GH Pages site](https://waimea-dt.github.io/flask-project-level-2-project-report-writing/)*
 
 
 ## Project Structure
