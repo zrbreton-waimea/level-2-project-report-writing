@@ -27,7 +27,7 @@ Develop a design for the database and a UI prototype that simulates the key func
 
 Replace this text with notes regarding the DB design.
 
-![DB Design](screenshots/placeholder.png)
+![db-design](image.png)
 
 
 ### Required Data Input
