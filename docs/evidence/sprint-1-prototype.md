@@ -22,17 +22,28 @@ Develop a design for the database and a UI prototype that simulates the key func
     - Colour palette
     - Etc.
 
+Questions for stakeholder:
+
+*How does the report writing process work? Will it be a tick box questionare for each subject then a comment? What actually is the structure?*
+
+How does each of the five achievement comments corrispond to a subject? (emerging, developing, consolidating, proficient and exceeding).
+
+Flow wise, does the web page seem to work well? Will it speed up report writing in its current state? What needs changing?
+
+For adding a student, does the system feel streamlined?
 
 ## Initial Database Design
 
-Replace this text with notes regarding the DB design.
+There will be ... tables this will allow for the most modular design flexibility 
 
 ![db-design](image.png)
 
 
 ### Required Data Input
 
-Replace this text with a description of what data will be input, and where / how it will be obtained.
+There will be an option for the teacher to either import/paste a dataset or CSV file that will hold student names and ID's. This will kept in a table (students) that is separate so they can be connected to the corresponding data set for the comments.
+
+There will be a table with 
 
 ### Required Data Output
 
