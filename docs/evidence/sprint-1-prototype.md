@@ -26,11 +26,20 @@ Questions for stakeholder:
 
 *How does the report writing process work? Will it be a tick box questionare for each subject then a comment? What actually is the structure?*
 
+Response: Dad - "Very specific indicators that the students performance is measured against, within that in each subject there are specific achievement objectives, such as do they know their 2, 3, 4, 5, 6, and 10 times tables."
+
 How does each of the five achievement comments corrispond to a subject? (emerging, developing, consolidating, proficient and exceeding).
+
+Response: Dad - "The achievement milestones are used to determine which descriptor is most appropriate for each student. For example if a student has mastered all of the Maths milestones for their year, they would be classified as being proficient"
 
 Flow wise, does the web page seem to work well? Will it speed up report writing in its current state? What needs changing?
 
+Response: Dad - "For entering the Student info, instead of having a student ID being entered, it should be a full name search system that brings up the student - could be predictive search so that it is quick and easy."
+
 For adding a student, does the system feel streamlined?
+
+Response: Dad - "It would be good to have a key at the bottom that says what each number represents/what performance thing it represents."
+
 
 ## Initial Database Design
 
@@ -43,15 +52,15 @@ There will be ... tables this will allow for the most modular design flexibility
 
 There will be an option for the teacher to either import/paste a dataset or CSV file that will hold student names and ID's. This will kept in a table (students) that is separate so they can be connected to the corresponding data set for the comments.
 
-There will be a table with 
+There will be a table that will be filled with students and there corresponding student name and ID. This will be added through the import data page.
 
 ### Required Data Output
 
-Replace this text with a description of the outputs for the system - what types of data will be displayed?
+The type of data that will be displayed is the final comment generated once the user has completed the form. This will be the report of the students behaviour and overall acedemic performance.
 
 ### Required Data Processing
 
-Replace this text with a description of how the data will be processed to achieve the desired output(s) - any processes / formulae?
+The first input of my system after the student data set is imported their name, gender, followed by the term of the report. The next step will be the sliders page which the user will choose a slot on the slider that corresponds to the achievement descriptor for Maths, Reading, Writing and Behaviour. The third page is the comments page where the user will add comments for the four as well. Finally on the last page a report will be generated.
 
 
 ## UI 'Flow'
@@ -60,7 +69,7 @@ The first stage of prototyping was to explore how the UI might 'flow' between st
 
 This Figma demo shows the initial design for the UI 'flow':
 
-**FIGMA FLOW - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT**
+
 
 ### Testing
 
