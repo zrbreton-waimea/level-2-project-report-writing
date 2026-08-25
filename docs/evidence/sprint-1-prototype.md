@@ -69,36 +69,42 @@ The first stage of prototyping was to explore how the UI might 'flow' between st
 
 This Figma demo shows the initial design for the UI 'flow':
 
+![first-flow](image-1.png)
+
+Here is the share link: https://design.penpot.app/#/view?file-id=6f06cb60-262a-804c-8008-6c68101502e2&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fde098ffcfd
 
 
 ### Testing
 
-Replace this text with notes about what you did to test the UI flow and the outcome of the testing.
+My stakeholder said that it would be good to have a way to import students in one go before starting the questionare. This would allow a much more streamlined experience.
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+I added a way to bulk add students names' and ID's to streamline the experience.
 
-*IMPROVED FIGMA FLOW - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+![second-flow](image-2.png)
 
+Here is the share link: https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750
 
 ## Initial UI Prototype
 
 The next stage of prototyping was to develop the layout for each screen of the UI.
 
+https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750
+
 This Figma demo shows the initial layout design for the UI:
 
-*FIGMA PROTOTYPE - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
 
 ### Testing
 
-Replace this text with notes about what you did to test the UI flow and the outcome of the testing.
+My stakeholder tested/went through each page that would require user input to generate a report. 
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+I only made one adjustment which was to add the final page of the process where the final report will appear which is where the user will be able to tweak/edit it.
 
-*FIGMA IMPROVED PROTOTYPE - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750
+
 
 
 ## Refined UI Prototype
