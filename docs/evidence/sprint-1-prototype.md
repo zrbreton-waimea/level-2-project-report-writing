@@ -40,6 +40,22 @@ For adding a student, does the system feel streamlined?
 
 Response: Dad - "It would be good to have a key at the bottom that says what each number represents/what performance thing it represents."
 
+Dad's email about structure:
+
+Kia ora son, 
+
+There is a lot of detail provided in the report due to the recent changes in the curriculum. The important information is what is provided under each subject area (Reading, Writing and Maths) and for the Kaiako Comment at the start of the report. Your report writing tool only needs to accommodate the following under each core subject (Reading, Writing and Maths)
+Overall Achievement: This relates to the progress descriptors
+Effort: This relates to the effort descriptors. See explanation in the report.
+Kaiako Comment: Auto-generated in Hero based on where the student is at with their learning.
+Next Steps: Auto-generated in Hero based on where the student is at with their learning. I can give you a list of these comments.
+Help at Home: Auto-generated in Hero based on where the student is at with their learning.  I can give you a list of these comments.
+
+In addition, there will need to be an overall Kaiako Comment field that facilitates a tailored comment from kaiako. This needs to be an open field with a character limit. This is at the top of the report.
+
+Let me know if you need anything more.
+
+-G
 
 ## Initial Database Design
 
@@ -111,22 +127,30 @@ https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&pa
 
 Having established the layout of the UI screens, the prototype was refined visually, in terms of colour, fonts, etc.
 
+I gave my stakeholder the following three colour options:
+
+Color Scheme 1 - https://www.realtimecolors.com/?colors=ecebea-100c0a-e0af9e-9c3c16-fe5410&fonts=Inter-Inter
+
+Color Scheme 2 - https://www.realtimecolors.com/?colors=d7f7d7-031003-8ae688-1b814f-31d4aa&fonts=Inter-Inter
+
+Color Scheme 3 - https://www.realtimecolors.com/?colors=efedeb-0d0c0b-c2bbb3-4e5f4d-76907e&fonts=Inter-Inter
+
+Dad - "I can tell you what I like best about colour scheme 1. Lettering is easy to read against the warm colours."
+
 This Figma demo shows the UI with refinements applied:
 
-*FIGMA REFINED PROTOTYPE - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&zoom=fit&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750
 
 ### Testing
 
-Replace this text with notes about what you did to test the UI flow and the outcome of the testing.
+My stakeholder was happy with the UI flow with the new addition of the chosen colour palette. He said that "It was easy to follow what buttons are most commonly pressed/used". This allows for the user to efficiently use my app.
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
-
-*FIGMA IMPROVED REFINED PROTOTYPE - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+There were no furthur changes made as my stakeholder was satisfied with the final UI flow.
 
 
 ## Sprint Review
 
-Replace this text with a statement about how the sprint has moved the project forward - key success point, any things that didn't go so well, etc.
+I have moved the project forward in this sprint by discussing UI flow and color schemes with my 
 
