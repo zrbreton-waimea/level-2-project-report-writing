@@ -57,11 +57,22 @@ Let me know if you need anything more.
 
 -G
 
-## Initial Database Design
+## First Database Design
 
-There will be ... tables this will allow for the most modular design flexibility 
+There will be three tables this will allow for the most modular design flexibility. There will be a one to many relationship going from the reports table to the students table.
 
-![db-design](image.png)
+![db-design-v1](image.png)
+
+## Second Database Iteration
+I have edited the database design to better catter to being more compadible for the report writing structure that was requested/needed for my stakeholder. 
+
+![db-design-v2](image-3.png)
+
+## Example of final report generated
+The goal is for the generator to spit out something similar to the structure of the following report exemplar.
+
+https://mail.google.com/mail/u/0?ui=2&ik=18e708f3c5&attid=0.1&permmsgid=msg-f:1874992101179489727&th=1a054f61c3777dbf&view=att&disp=safe&realattid=f_mtgfh0630&zw
+
 
 
 ### Required Data Input
@@ -152,5 +163,5 @@ There were no furthur changes made as my stakeholder was satisfied with the fina
 
 ## Sprint Review
 
-I have moved the project forward in this sprint by discussing UI flow and color schemes with my 
+I have moved the project forward in this sprint by discussing UI flow and color schemes with my stakeholder which improved my idea of what the final product will look like cattered to my stakeholder.
 
