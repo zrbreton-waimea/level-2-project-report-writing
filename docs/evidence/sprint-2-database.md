@@ -12,12 +12,12 @@ Implement the database, populated with test data. Create queries that retrieve t
 - Implement the database
 - Add test data to the database
 - Create the following web pages:
-    - Home pages showing...
-    - Details page for ...
+    - Home pages showing the two options shown in my test UI flow. 
+    - Successfully display a page where the user can import student names. 
     - Etc.
 - Develop SQL database queries to:
-    - Retrieve all ...
-    - Retrieve specific ...
+    - Retrieve all data nessacery for the report to be generated.
+    - Retrieve specific information such as student names.
     - Etc.
 
 

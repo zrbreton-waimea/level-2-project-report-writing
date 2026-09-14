@@ -40,7 +40,7 @@ def show_notes():
         flash("Test WARNING message", "warning")
         flash("Test ERROR message", "error")
 
-        return render_template("pages/note_list.jinja", notes=notes)
+        return render_template("pages/index.jinja", notes=notes)
 
 
 #===========================================================
