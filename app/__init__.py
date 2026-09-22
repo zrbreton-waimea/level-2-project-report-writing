@@ -21,7 +21,7 @@ app = Flask(__name__)
 #===========================================================
 
 #-----------------------------------------------------------
-# Home page - Show all notes
+# Home page - Show options 
 #-----------------------------------------------------------
 @app.get("/")
 def show_notes():
@@ -41,6 +41,13 @@ def show_notes():
         flash("Test ERROR message", "error")
 
         return render_template("pages/index.jinja", notes=notes)
+
+#===========================================================
+# Import - Shows a text box for easy pasting 
+#===========================================================
+@app.get("/import-data")
+def show_example():
+    return render_template("pages/import-data.jinja")
 
 
 #===========================================================

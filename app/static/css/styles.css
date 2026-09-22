@@ -10,6 +10,8 @@
     --secondary: #9c3c16;
     --accent: #fe5410;
 
+    --dark-secondary: #3e0000;
+
 }
 
 
@@ -18,7 +20,6 @@
 html {
     background-color: var(--background);
     color: var(--text);
-
     font-family: system-ui, sans-serif;
 }
 
@@ -37,19 +38,25 @@ main {
 
 /* Header & Nav -----------------------------------------------*/
 
-body > header {
+body{
     display: flex;
     gap: 1rem;
-    align-items: center;
     justify-content: space-between;
     padding: 1rem;
 
     nav {
+        justify-self: center;
         display: flex;
         gap: 1rem;
 
         a {
-            color: var(--accent);
+            font-size: large;
+            margin-top: 20rem;
+            color: var(--text);
+            text-decoration: none;
+            background-color: var(--secondary);
+            border-radius: .2rem;
+            padding: 0.3rem;
         }
     }
 }
@@ -64,6 +71,46 @@ main > h2 {
 }
 
 
-/* Notes --------------------------------------------------*/
+/* Import Data --------------------------------------------------*/
 
+
+/* Index */
+
+#circle-1 {
+    height: 20rem;
+    width: 20rem;
+    background: linear-gradient(94deg, var(--accent) 0%, var(--secondary) 100%);
+    border-radius: 50%;
+    position: absolute;
+    left: -4rem;
+    top: -3rem;
+    z-index: -1;
+    filter:blur(50px);
+    animation: ball-bounce-1 10s infinite 1s;
+    }
+
+#circle-2 {
+    height: 20rem;
+    width: 20rem;
+    background: var(--dark-secondary);
+    border-radius: 50%;
+    position: absolute;
+    left: 13rem;
+    top: 20rem;
+    z-index: -1;
+    filter:blur(50px);
+    animation: ball-bounce-2 10s infinite;
+    }
+
+@keyframes ball-bounce-1 {
+   0%   {top: -7rem;}
+   50% {top: -3rem;}
+  100% {top: -7rem;}
+}
+
+@keyframes ball-bounce-2 {
+   0%   {top: 20rem;}
+   50% {top: 35rem;}
+  100% {top: 20rem;}
+}
 
