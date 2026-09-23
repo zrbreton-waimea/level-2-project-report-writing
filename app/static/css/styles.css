@@ -87,6 +87,7 @@ main > h2 {
     z-index: -1;
     filter:blur(50px);
     animation: ball-bounce-1 10s infinite 1s;
+    overflow: hidden;
     }
 
 #circle-2 {
@@ -100,8 +101,8 @@ main > h2 {
     z-index: -1;
     filter:blur(50px);
     animation: ball-bounce-2 10s infinite;
+    overflow: hidden;
     }
-
 @keyframes ball-bounce-1 {
    0%   {top: -7rem;}
    50% {top: -3rem;}
