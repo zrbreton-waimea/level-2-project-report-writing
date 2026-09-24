@@ -7,10 +7,30 @@
 
 {% block content %}
   <header>
+    <a href="/"><img src="app\static\images\circle-arrow-left.svg"></a>
     <h1> Report Preview </h1>
   </header>
 
     <section id="report-preview">
+
+      {% for item in list %}
+
+          <div class="report-student">
+              <h3>{{ item.student_id      }}</h3>
+
+              <p>{{ item.maths_meas       }}</p>
+              <p>{{ item.maths_alge       }}</p>
+              <p>{{ item.maths_numb       }}</p>
+              <p>{{ item.maths_geom       }}</p>
+              <p>{{ item.maths_stat       }}</p>
+              <p>{{ item.maths_behaviour  }}</p>
+          
+          </div>
+
+        {% else %}
+          <p>There are no reports to view! Sit back and relax, go watch some <a href="https://www.netflix.com">Netflix.</a></p>
+
+      {% endfor %}
 
     </section>
 

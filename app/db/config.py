@@ -43,8 +43,8 @@ class reports:
         CREATE TABLE reports(
             id      INTEGER PRIMARY KEY AUTOINCREMENT,
 
-            student_id   TEXT NOT NULL,
-            term    INTEGER,
+            student_id      TEXT NOT NULL,
+            term            INTEGER,
 
             maths_meas      INTEGER,
             maths_alge      INTEGER,

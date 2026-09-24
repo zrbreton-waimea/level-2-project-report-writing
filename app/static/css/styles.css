@@ -30,8 +30,7 @@ body {
 
 
 main {
-    max-width: 60rem;
-    margin-inline: auto;
+    margin-inline: auto;    
     padding: 1rem;
 }
 
@@ -67,7 +66,7 @@ body{
 main > h2 {
     font-size: 2rem;
     text-align: center;
-    margin-block: 2rem;
+    margin-block: 1rem;
 }
 
 
@@ -115,3 +114,25 @@ main > h2 {
   100% {top: 20rem;}
 }
 
+/* Report Preview ------------------------------------*/
+#report-preview{
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 500px){
+        flex-direction: column;
+    }
+}
+
+.report-student {
+    background-color: var(--dark-secondary);
+    border-radius: 1rem;
+    border: var(--background);
+    padding: 1rem;
+    margin: 1rem;
+
+    width: 20rem;
+    filter: drop-shadow(
+    4px 2px 4px var(--secondary)
+  );
+}
