@@ -10,8 +10,12 @@
     --secondary: #9c3c16;
     --accent: #fe5410;
 
-    --dark-secondary: #3e0000;
+    --dark-secondary: #5a0b0b;
+    --light-secondary: color-mix(in srgb, var(--secondary)70%, white);
 
+    --button-outline: color-mix(in srgb, var(--secondary)60%, white);
+
+    --random-movement: 
 }
 
 
@@ -31,33 +35,12 @@ body {
 
 main {
     margin-inline: auto;    
-    padding: 1rem;
 }
 
 
 /* Header & Nav -----------------------------------------------*/
-
-body{
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-    padding: 1rem;
-
-    nav {
-        justify-self: center;
-        display: flex;
-        gap: 1rem;
-
-        a {
-            font-size: large;
-            margin-top: 20rem;
-            color: var(--text);
-            text-decoration: none;
-            background-color: var(--secondary);
-            border-radius: .2rem;
-            padding: 0.3rem;
-        }
-    }
+header{
+    background: none;
 }
 
 
@@ -75,18 +58,114 @@ main > h2 {
 
 /* Index */
 
+
+
+#home{
+    justify-content: center;
+    h1{
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+.feature-btns{
+    margin-top: 20rem;
+    text-align: center;
+
+    a{
+        text-decoration: none;
+        color: var(--text);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--button-outline);
+    }
+
+    #get-started{
+        font-weight: 700;
+        backdrop-filter: blur(16px);
+        background: hsl(0deg 0% 100% / 0.1); 
+    }
+
+    #import{
+       font-weight: 400;
+       backdrop-filter: blur(16px);
+       background: hsl(0deg 0% 100% / 0.1); 
+    }
+
+    /* Button hover animation */
+    #import::before{
+        content: "";     
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: none;
+        transition: 0.5s ease;
+        z-index: -1;
+    }
+
+    #import:hover::before{
+        content: "";     
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--dark-secondary);
+        scale: 1.25;
+        filter: blur(16px);
+        z-index: -1;
+        transition: 0.5s ease;
+    }
+
+    #get-started::before{
+        content: "";     
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: none;
+        transition: 0.5s ease;
+        z-index: -1;
+    }
+
+    #get-started:hover::before{
+        content: "";     
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--light-secondary);
+        scale: 1.25;
+        filter: blur(16px);
+        z-index: -1;
+        transition: 0.5s ease;
+    }
+}
+
+.circles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: -1;
+}
+
 #circle-1 {
     height: 20rem;
     width: 20rem;
     background: linear-gradient(94deg, var(--accent) 0%, var(--secondary) 100%);
     border-radius: 50%;
     position: absolute;
-    left: -4rem;
-    top: -3rem;
-    z-index: -1;
     filter:blur(50px);
     animation: ball-bounce-1 10s infinite 1s;
-    overflow: hidden;
+    margin-left: 13rem;
     }
 
 #circle-2 {
@@ -95,44 +174,45 @@ main > h2 {
     background: var(--dark-secondary);
     border-radius: 50%;
     position: absolute;
-    left: 13rem;
-    top: 20rem;
-    z-index: -1;
     filter:blur(50px);
+    margin-right: 13rem;
     animation: ball-bounce-2 10s infinite;
-    overflow: hidden;
     }
+
 @keyframes ball-bounce-1 {
-   0%   {top: -7rem;}
-   50% {top: -3rem;}
-  100% {top: -7rem;}
+   0%   {top: 9rem;}
+   50% {top: 4rem;}
+  100% {top: 9rem;}
 }
 
 @keyframes ball-bounce-2 {
-   0%   {top: 20rem;}
-   50% {top: 35rem;}
-  100% {top: 20rem;}
+   0%   {top: 7rem;}
+   50% {top: 30rem;}
+  100% {top: 7rem;}
 }
 
 /* Report Preview ------------------------------------*/
 #report-preview{
     display: flex;
-    flex-direction: row;
-
-    @media (max-width: 500px){
-        flex-direction: column;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.back-button-icon{
+        scale: 1.5;
+        backdrop-filter: blur(16px);
+        background: hsl(0deg 0% 100% / 0.1); 
+}
+
+
 .report-student {
+    border: 2px solid var(--text);
     background-color: var(--dark-secondary);
     border-radius: 1rem;
-    border: var(--background);
     padding: 1rem;
     margin: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 
-    width: 20rem;
-    filter: drop-shadow(
-    4px 2px 4px var(--secondary)
-  );
+
 }

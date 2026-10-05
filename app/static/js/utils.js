@@ -44,3 +44,12 @@ window.onload = (event) => {
     }
 }
 
+    //---------------------------------------------------
+    // Random int\
+    //---------------------------------------------------
+    // var r = document.querySelector(':root');
+
+    // function myFunction_get(){
+
+    // }
+
