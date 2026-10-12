@@ -21,22 +21,22 @@ Implement the database, populated with test data. Create queries that retrieve t
     - Etc.
 
 
-## Testing FEATURE NAME HERE
+## Test 1 - Displaying Seed Data of Student Info
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+I am testing whether the seed data I added into the data bases were accessable and displaying on the front end. I did this by creating a page that shows some information from these data bases, such as student id, ratings for subjects and overall rating. I was able to display some test data hich proved that the connection is working.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
 
-![Placeholder](screenshots/placeholder.png)
+![report-preview-test](image-4.png)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+I will change the preview to allow the ratings to be edited as per request from my stakeholder.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 
 
-## Testing FEATURE NAME HERE
+## Test 2 - Displaying seed data and allowing it to be edited.
 
 Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
 

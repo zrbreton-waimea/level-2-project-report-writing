@@ -198,10 +198,13 @@ main > h2 {
     justify-content: center;
 }
 
-.back-button-icon{
-        scale: 1.5;
-        backdrop-filter: blur(16px);
-        background: hsl(0deg 0% 100% / 0.1); 
+header{
+    .back-btn{
+        background-color: #5a0b0b;
+    }
+    h1{
+        text-align: center;
+    }
 }
 
 
@@ -214,5 +217,7 @@ main > h2 {
     padding-left: 3rem;
     padding-right: 3rem;
 
-
+    h2{
+        text-decoration: underline;
+    }
 }

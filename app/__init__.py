@@ -60,6 +60,38 @@ def show_example():
     return render_template("pages/report-preview.jinja", list=list)
 
 #===========================================================
+# Report Preview editing - Allows the user to edit student info
+#===========================================================
+@app.post("/report-preview/update")
+def process_student_report_form():
+    #Get the form data
+    maths_measure    = request.form.get("maths_meas", "unknown").strip()
+    maths_algebra    = request.form.get("maths_alge ", "unknown").strip()
+    maths_number     = request.form.get("maths_numb", "unknown").strip()
+    maths_geometry   = request.form.get("maths_geom", "unknown").strip()
+    maths_statistics = request.form.get("maths_stat", "unknown").strip()
+    maths_behaviour  = request.form.get("maths_behaviour", "unknown").strip()
+
+    student_id = request.form.get("id", "unknown").strip()
+
+    #Connect to the database
+    with connect_db() as db:
+        sql = """ 
+            INSERT INTO reports ()
+            VALUES (?, ?)
+        """
+
+        params = (maths_measure, maths_algebra, maths_number, maths_geometry, maths_statistics, maths_behaviour)        
+        
+        #Run the query
+        db.execute(sql, params)
+
+        flash(f"{student_id} info updated successfully!")
+        
+    #done, redirect to the creature list page
+    return redirect("/report-preview")   
+
+#===========================================================
 # Configure the app
 #===========================================================
 load_dotenv()

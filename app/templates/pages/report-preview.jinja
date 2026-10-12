@@ -15,17 +15,19 @@
 
       {% for item in list %}
 
-          <div class="report-student">
-              <h3>{{ item.student_id      }}</h3>
+          <form class="student-report" method="update" action="/report-preview/update">
+              <h2>{{ item.student_id      }}</h2>
 
-              <p>{{ item.maths_meas       }}</p>
-              <p>{{ item.maths_alge       }}</p>
-              <p>{{ item.maths_numb       }}</p>
-              <p>{{ item.maths_geom       }}</p>
-              <p>{{ item.maths_stat       }}</p>
-              <p>{{ item.maths_behaviour  }}</p>
+              <h3>Maths Ratings</h3>
+
+              <label>{{ item.maths_meas       }}</label>
+              <label>{{ item.maths_alge       }}</label>
+              <label>{{ item.maths_numb       }}</label>
+              <label>{{ item.maths_geom       }}</label>
+              <label>{{ item.maths_stat       }}</label>
+              <label>{{ item.maths_behaviour  }}</label>
           
-          </div>
+          </form>
 
         {% else %}
           <p>There are no reports to view! Sit back and relax, go watch some <a href="https://www.netflix.com">Netflix.</a></p>
