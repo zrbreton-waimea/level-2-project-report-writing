@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This is an app that ...
+This is an app that will allow teachers to generate reports for students.
 
 The app has the following key features:
 - Feature one
@@ -10,6 +10,9 @@ The app has the following key features:
 - Feature three
 - ...
 
+## Live Site
+
+https://level-2-project-report-writing.onrender.com/
 
 ## Supporting Documents
 
@@ -22,21 +25,6 @@ Project Evidence
 - [Sprint 2: MVP Development](docs/evidence/sprint-2-mvp.md)
 - [Sprint 3: Final System Development](docs/evidence/sprint-3-final.md)
 - [Review: Project Final Review](docs/evidence/system-review.md)
-
-
-## Test Accounts
-
-The following user accounts have been created to demonstrate the features of the system:
-
-Test User 1:
-- Username: xxxxx
-- Password: xxxxx
-
-Test User 2:
-- Username: xxxxx
-- Password: xxxxx
-
-...
 
 
 ## Technologies Used

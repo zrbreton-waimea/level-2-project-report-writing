@@ -59,9 +59,9 @@ def show_example():
     
     return render_template("pages/report-preview.jinja", list=list)
 
-#===========================================================
-# Report Preview editing - Allows the user to edit student info
-#===========================================================
+#===============================================================
+# Report Preview editing - Allows the user to edit student info UNFINISHED
+#===============================================================
 @app.post("/report-preview/update")
 def process_student_report_form():
     #Get the form data

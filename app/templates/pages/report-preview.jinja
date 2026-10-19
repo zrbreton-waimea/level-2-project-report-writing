@@ -7,7 +7,7 @@
 
 {% block content %}
   <header>
-    <a href="/" class="back-btn"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+    <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon" class="back-btn"></a>
     <h1> Report Preview </h1>
   </header>
 
@@ -15,7 +15,7 @@
 
       {% for item in list %}
 
-          <form class="student-report" method="update" action="/report-preview/update">
+          <form id="student-report" method="update" action="/report-preview/update">
               <h2>{{ item.student_id      }}</h2>
 
               <h3>Maths Ratings</h3>

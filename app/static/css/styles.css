@@ -196,19 +196,10 @@ main > h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
 
-header{
-    .back-btn{
-        background-color: #5a0b0b;
-    }
-    h1{
-        text-align: center;
-    }
-}
-
-
-.report-student {
+    #student-report{
+    display: flex;
+    flex-direction: column;
     border: 2px solid var(--text);
     background-color: var(--dark-secondary);
     border-radius: 1rem;
@@ -219,5 +210,20 @@ header{
 
     h2{
         text-decoration: underline;
+    }
+}
+}
+
+
+
+header{
+    .back-btn{
+        margin: 1rem;
+        border-radius: 100%;
+        backdrop-filter: blur(16px);
+        background: hsl(0deg 0% 100% / 0.1);
+    }
+    h1{
+        text-align: center;
     }
 }
