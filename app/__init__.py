@@ -43,7 +43,7 @@ def import_data():
 #===========================================================
 # Report Preview - Shows seed data
 #===========================================================
-@app.get("/report-preview")
+@app.get("/class")
 def show_example():
 
     with connect_db() as db:
@@ -57,12 +57,12 @@ def show_example():
             params = ()
             list = db.execute(sql, params).fetchall()
     
-    return render_template("pages/report-preview.jinja", list=list)
+    return render_template("pages/class-room.jinja", list=list)
 
 #===============================================================
 # Report Preview editing - Allows the user to edit student info UNFINISHED
 #===============================================================
-@app.post("/report-preview/update")
+@app.post("/class/update")
 def process_student_report_form():
     #Get the form data
     maths_measure    = request.form.get("maths_meas", "unknown").strip()
