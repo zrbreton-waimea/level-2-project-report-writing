@@ -15,7 +15,7 @@
 
     --button-outline: color-mix(in srgb, var(--secondary)60%, white);
 
-    --random-movement: 
+    --button-scale: 2rem;
 }
 
 
@@ -57,9 +57,6 @@ main > h2 {
 
 
 /* Index */
-
-
-
 #home{
     justify-content: center;
     h1{
@@ -191,39 +188,75 @@ main > h2 {
   100% {top: 7rem;}
 }
 
-/* Report Preview ------------------------------------*/
-#report-preview{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    #student-report{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--text);
-    background-color: var(--dark-secondary);
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 1rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-
-    h2{
-        text-decoration: underline;
-    }
-}
-}
+/* Class Room ------------------------------------*/
 
 
+.student{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr auto;
+
+        border: 2px solid var(--text);
+        background-color: var(--dark-secondary);
+        border-radius: 1rem;
+
+        padding: 1rem;
+        margin: 1rem;
+
+        h2{
+            padding-left:  0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        #divider{
+            height: 40px;
+            width: 4px;
+            border-radius: 5rem;
+            background-color: #555;
+        }
+        
+        .add-btn{
+            align-self: center;
+            justify-self: end;
+            border-radius: 100%;
+            backdrop-filter: blur(16px);
+            background: hsl(0deg 0% 100% / 0.1);
+
+            height: var(--button-scale);
+            width: var(--button-scale);
+
+                img{
+                width: var(--button-scale);
+                height: var(--button-scale); 
+            }
+        }
+    } 
+    
 
 header{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: center;
+    align-items: center;
+    h1{
+        text-decoration: underline;
+        
+    }
+
     .back-btn{
         margin: 1rem;
         border-radius: 100%;
         backdrop-filter: blur(16px);
         background: hsl(0deg 0% 100% / 0.1);
-    }
-    h1{
-        text-align: center;
+        width: var(--button-scale);
+        height: var(--button-scale);
+
+        img{
+            width: var(--button-scale);
+            height: var(--button-scale); 
+        }
     }
 }
+
+
+    
+

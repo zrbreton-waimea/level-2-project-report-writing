@@ -48,10 +48,11 @@ def show_example():
 
     with connect_db() as db:
             sql = """
-                SELECT student_id, term, maths_meas, maths_alge, maths_numb, 
-                maths_geom, maths_stat, maths_behaviour, maths_comment
+                SELECT reports.student_id, students.name
 
                 FROM reports
+
+                JOIN students ON reports.student_id = students.id
 
             """
             params = ()

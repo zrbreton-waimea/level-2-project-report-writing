@@ -7,29 +7,29 @@
 
 {% block content %}
   <header>
-    <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon" class="back-btn"></a>
+    <div class="back-btn">
+      <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+    </div>
     <h1> Class Room </h1>
   </header>
 
-    <section id="report-preview">
+  
+
+    <section id="class-list">
 
       {% for item in list %}
 
-          <form id="student-report" method="update" action="/report-preview/update">
-              <h2>{{ item.student_id      }}</h2>
-
-              <h3>Maths Ratings</h3>
-
-              <label>{{ item.maths_meas       }}</label>
-              <label>{{ item.maths_alge       }}</label>
-              <label>{{ item.maths_numb       }}</label>
-              <label>{{ item.maths_geom       }}</label>
-              <label>{{ item.maths_stat       }}</label>
-              <label>{{ item.maths_behaviour  }}</label>
-          
-          </form>
+          <div class="student">
+            <h2>{{ item.student_id   }}</h2>
+            <div id="divider"></div>
+            <h2>{{ item.name }}</h2>
+              <div class="add-btn">
+                <a href="/"><img src="static/images/circle-plus.svg" alt="add-button-icon"></a>
+              </div>
+          </div>
 
         {% else %}
+
           <p>There are no reports to view! Sit back and relax, go watch some <a href="https://www.netflix.com">Netflix.</a></p>
 
       {% endfor %}

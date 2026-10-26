@@ -23,6 +23,9 @@
 </head>
 
 <body>
+    {% if request.path != '/' %}
+    {# BACK BUTTON CODE HERE #}
+    {% endif %}
 
     {# Show flash messages from any previous events
     {% include "partials/messages.jinja" %} #}
