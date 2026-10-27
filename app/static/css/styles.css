@@ -35,6 +35,25 @@ body {
 
 main {
     margin-inline: auto;    
+
+    .add-btn{
+        border-radius: 100%;
+        backdrop-filter: blur(16px);
+        background: hsl(0deg 0% 100% / 0.1);
+
+        height: var(--button-scale);
+        width: var(--button-scale);
+
+        justify-self: end;
+        align-self: center;
+
+        grid-column: 4 / 4;
+
+        img{
+        width: var(--button-scale);
+        height: var(--button-scale); 
+        }
+    }
 }
 
 
@@ -43,6 +62,31 @@ header{
     background: none;
 }
 
+nav{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        text-decoration: underline;
+        
+    }
+    
+    .back-btn{
+        margin: 1rem;
+        border-radius: 100%;
+        backdrop-filter: blur(16px);
+        background: hsl(0deg 0% 100% / 0.1);
+        width: var(--button-scale);
+        height: var(--button-scale);
+
+        img{
+            width: var(--button-scale);
+            height: var(--button-scale); 
+        }
+    }
+}
 
 /* Page Headings -----------------------------------------------*/
 
@@ -163,7 +207,7 @@ main > h2 {
     filter:blur(50px);
     animation: ball-bounce-1 10s infinite 1s;
     margin-left: 13rem;
-    }
+}
 
 #circle-2 {
     height: 20rem;
@@ -174,7 +218,7 @@ main > h2 {
     filter:blur(50px);
     margin-right: 13rem;
     animation: ball-bounce-2 10s infinite;
-    }
+}
 
 @keyframes ball-bounce-1 {
    0%   {top: 9rem;}
@@ -190,73 +234,58 @@ main > h2 {
 
 /* Class Room ------------------------------------*/
 
-
 .student{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr auto;
+    text-decoration: none;
+    color: var(--text);
 
+    display: grid;
+    grid-template-columns:
+    repeat(4, 1fr);
+    border: 2px solid var(--text);
+    background-color: var(--dark-secondary);
+    border-radius: 1rem;
+
+    padding: 1rem;
+    margin: 1rem;
+    h2{
+        padding-left:  0.5rem;
+        padding-right: 0.5rem;
+    }
+    #divider{
+        height: 40px;
+        width: 4px;
+        border-radius: 5rem;
+        background-color: #555;
+        
+    }
+
+    
+} 
+    
+/* Student Info */
+
+.student-info{
+    .student-data{
+        text-align: center;
+        margin: 1rem;
+    }
+
+    #term{
         border: 2px solid var(--text);
         background-color: var(--dark-secondary);
         border-radius: 1rem;
-
         padding: 1rem;
         margin: 1rem;
-
-        h2{
-            padding-left:  0.5rem;
-            padding-right: 0.5rem;
-        }
-
-        #divider{
-            height: 40px;
-            width: 4px;
-            border-radius: 5rem;
-            background-color: #555;
-        }
-        
-        .add-btn{
-            align-self: center;
-            justify-self: end;
-            border-radius: 100%;
-            backdrop-filter: blur(16px);
-            background: hsl(0deg 0% 100% / 0.1);
-
-            height: var(--button-scale);
-            width: var(--button-scale);
-
-                img{
-                width: var(--button-scale);
-                height: var(--button-scale); 
-            }
-        }
-    } 
-    
-
-header{
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    justify-content: center;
-    align-items: center;
-    h1{
-        text-decoration: underline;
-        
     }
 
-    .back-btn{
-        margin: 1rem;
-        border-radius: 100%;
-        backdrop-filter: blur(16px);
-        background: hsl(0deg 0% 100% / 0.1);
-        width: var(--button-scale);
-        height: var(--button-scale);
-
-        img{
-            width: var(--button-scale);
-            height: var(--button-scale); 
-        }
+    #divider{
+        height: 4px;
+        width: 16rem;
+        border-radius: 5rem;
+        background-color: #555;
+        justify-self: center;
     }
 }
-
 
     
 

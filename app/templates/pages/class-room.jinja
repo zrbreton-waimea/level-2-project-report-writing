@@ -7,26 +7,28 @@
 
 {% block content %}
   <header>
-    <div class="back-btn">
-      <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
-    </div>
-    <h1> Class Room </h1>
+    <nav>
+      <div class="back-btn">
+        <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+      </div>
+      <h1> Class Room </h1>
+    </nav>
   </header>
 
   
 
     <section id="class-list">
 
-      {% for item in list %}
-
-          <div class="student">
-            <h2>{{ item.student_id   }}</h2>
+      {% for student in students %}
+          <div href="/student-info/{{ student.student_id }}" class="student">
+            <h2>{{ student.student_id   }}</h2>
             <div id="divider"></div>
-            <h2>{{ item.name }}</h2>
+            <h2>{{ student.name }}</h2>
               <div class="add-btn">
-                <a href="/"><img src="static/images/circle-plus.svg" alt="add-button-icon"></a>
+                <a href="/student-info/{{ student.student_id }}"><img src="static/images/circle-plus.svg" alt="add-button-icon"></a>
               </div>
           </div>
+        
 
         {% else %}
 

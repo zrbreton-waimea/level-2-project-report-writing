@@ -1,0 +1,57 @@
+{#=====================================================
+  Home page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+  <header>
+    <nav>
+      <div class="back-btn">
+        <a href="/class-room"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+      </div>
+      <h1> Student Info </h1>
+    </nav>
+  </header>
+
+  <section class="student-info">
+
+    <div class="student-data">
+      <h2>Name: {{ student.name }}</h2>
+      <div id="divider"></div>
+      <h3>Student ID: {{ student.id }}</h3>
+    </div>  
+    
+    <div class="terms">
+    {% for term in range(1, 5) %}
+
+      {% set ns = namespace(report_found=false) %}
+
+      <div id="term">
+        <h2>Term {{ term }}</h2>
+
+        {% for report in reports %}
+          {% if report.term == term %}
+              {# SHOW THE REPORT DATA? #}
+
+              {{ report.term }} REPORT GOES HERE
+              
+              {% set ns.report_found = true %}
+            </div>
+          {% endif%}
+        {% endfor %}
+
+        {% if ns.report_found == false %}
+          <div class="add-btn">
+                  <a href="/"><img src="/static/images/circle-plus.svg" alt="add-button-icon"></a>
+          </div>
+        {% endif%}
+
+      </div>
+    {% endfor %}
+  </section>
+  
+
+{% endblock %}
+

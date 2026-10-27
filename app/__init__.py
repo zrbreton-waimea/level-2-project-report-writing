@@ -41,10 +41,10 @@ def import_data():
  return render_template("pages/import-data.jinja")
 
 #===========================================================
-# Report Preview - Shows seed data
+# Class List - Shows students in the class
 #===========================================================
-@app.get("/class")
-def show_example():
+@app.get("/class-room")
+def show_class_list():
 
     with connect_db() as db:
             sql = """
@@ -56,9 +56,35 @@ def show_example():
 
             """
             params = ()
-            list = db.execute(sql, params).fetchall()
+            students = db.execute(sql, params).fetchall()
     
-    return render_template("pages/class-room.jinja", list=list)
+    return render_template("pages/class-room.jinja", students=students)
+
+#===========================================================
+# Student Info - Shows which terms have reports completed 
+#===========================================================
+@app.get("/student-info/<id>")
+def show_student_info(id):
+
+    with connect_db() as db:
+            sql = """
+                SELECT id, name
+                FROM students
+                WHERE id = ?
+            """
+            params = (id, )
+            student = db.execute(sql, params).fetchone()
+    
+            sql = """
+                SELECT term
+                FROM reports
+                WHERE student_id = ?
+
+            """
+            params = (id, )
+            reports = db.execute(sql, params).fetchall()
+    
+    return render_template("pages/student-info.jinja", student=student, reports=reports)
 
 #===============================================================
 # Report Preview editing - Allows the user to edit student info UNFINISHED
