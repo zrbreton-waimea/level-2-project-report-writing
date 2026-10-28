@@ -20,14 +20,11 @@
     <section id="class-list">
 
       {% for student in students %}
-          <div href="/student-info/{{ student.student_id }}" class="student">
+          <a href="/student-info/{{ student.student_id }}" class="student">
             <h2>{{ student.student_id   }}</h2>
             <div id="divider"></div>
             <h2>{{ student.name }}</h2>
-              <div class="add-btn">
-                <a href="/student-info/{{ student.student_id }}"><img src="static/images/circle-plus.svg" alt="add-button-icon"></a>
-              </div>
-          </div>
+          <a>
         
 
         {% else %}

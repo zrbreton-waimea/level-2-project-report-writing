@@ -234,36 +234,43 @@ main > h2 {
 
 /* Class Room ------------------------------------*/
 
-.student{
-    text-decoration: none;
-    color: var(--text);
-
-    display: grid;
-    grid-template-columns:
-    repeat(4, 1fr);
-    border: 2px solid var(--text);
-    background-color: var(--dark-secondary);
-    border-radius: 1rem;
-
-    padding: 1rem;
-    margin: 1rem;
-    h2{
-        padding-left:  0.5rem;
-        padding-right: 0.5rem;
-    }
-    #divider{
-        height: 40px;
-        width: 4px;
-        border-radius: 5rem;
-        background-color: #555;
-        
-    }
-
+#class-list{
     
-} 
+    .student{
+        text-decoration: none;
+        color: var(--text);
+
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+
+        border: 2px solid var(--text);
+        background-color: var(--dark-secondary);
+        border-radius: 1rem;
+
+        padding: 1rem;
+        margin: 1rem auto;
+
+        h2{
+            padding-left:  0.5rem;
+            padding-right: 0.5rem;
+        }
+        #divider{
+            height: 40px;
+            width: 4px;
+            border-radius: 5rem;
+            background-color: #555;
+            
+        }
+
+        
+    } 
+}
     
 /* Student Info */
-
+    
 .student-info{
     .student-data{
         text-align: center;

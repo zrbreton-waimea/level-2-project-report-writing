@@ -53,7 +53,8 @@ def show_class_list():
                 FROM reports
 
                 JOIN students ON reports.student_id = students.id
-
+                
+                ORDER BY students.name ASC
             """
             params = ()
             students = db.execute(sql, params).fetchall()

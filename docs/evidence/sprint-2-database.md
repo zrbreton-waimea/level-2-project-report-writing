@@ -31,29 +31,46 @@ I am testing whether the seed data I added into the data bases were accessable a
 
 ### Changes / Improvements
 
-I will change the preview to allow the ratings to be edited as per request from my stakeholder.
+After a discussion with my stakeholder, he asked the question "How will I be able to pick a student from the class list to view there report?" - Gareth 
+This made me realise that there is a massive flaw in the system, the user cannot look back on reports or students in general which destroys the point of saving student data in a database. 
+
+"Could you have a page where all of my students are showed, so I can select which student I want to create a report for?" - Gareth
+Further discussion with my stakeholder revealed that it would be a much better idea to have a class list page with a list of students that show their name and student ID
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 
+Here is the UI mock up:
+![class-room-page-penpot](image-5.png)
 
-## Test 2 - Displaying seed data and allowing it to be edited.
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+## Test 2 - Class Room Page
+
+I will be testing whether the class room page displays the student name and student ID as it should in the desired order.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
 
+![class-room-page](<Screenshot 2026-10-27 144131.png>)
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+"Can the students be ordered in Alphabetical order?" - Gareth 
+I will sort the students names A to Z and display them in this order.
+
+![names-alphabetical-order](image-6.png)
+
+"What term does the plus button bring you to?" - Gareth 
+The plus button was the original link to the term selection page, for clearity I will remove the plus button and replace it by making the student's container a link itself.
+
+![student-info-link](image-7.png)
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 
 
-## Testing FEATURE NAME HERE
+## Testing Student Info 
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+I will be testing whether the info of the student can be displayed using seed data when selecting someone from the list.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+
 
 ### Changes / Improvements
 
