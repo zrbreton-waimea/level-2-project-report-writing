@@ -1,0 +1,58 @@
+{#=====================================================
+  Home page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+  <header>
+    <nav>
+      <div class="back-btn">
+        <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+      </div>
+      <h1>Subject Performance</h1>
+    </nav>
+  </header>
+
+    <section id="maths">
+      <form class="maths-form" method="post">
+
+        <h2>Measurement</h2>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" id="measurment-range">
+          </div>
+        
+        <h2>Algebra</h2>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" id="algebra-range">
+          </div>
+        
+        <h2>Number</h2>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" id="number-range">
+          </div>
+
+        <h2>Geometry</h2>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" id="geometry-range">
+          </div>
+        
+        <h2>Statistics</h2>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" id="statistics-range">
+          </div>
+        
+      </form>
+
+      <div class="key">
+        <h3>1 - Emerging</h3>
+        <h3>2 - Developing</h3>
+        <h3>3 - Consolidating</h3>
+        <h3>4 - Proficient</h3>
+        <h3>5 - Exceeding</h3>
+      </div>
+
+    </section>
+
+

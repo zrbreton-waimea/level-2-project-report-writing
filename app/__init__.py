@@ -87,6 +87,28 @@ def show_student_info(id):
     
     return render_template("pages/student-info.jinja", student=student, reports=reports)
 
+#===========================================================
+# Report Form - Makes the form to 
+#===========================================================
+@app.get("/class-room")
+def show_class_list():
+
+    with connect_db() as db:
+            sql = """
+                SELECT reports.student_id, students.name
+
+                FROM reports
+
+                JOIN students ON reports.student_id = students.id
+                
+                ORDER BY students.name ASC
+            """
+            params = ()
+            students = db.execute(sql, params).fetchall()
+    
+    return render_template("pages/class-room.jinja", students=students)
+
+
 #===============================================================
 # Report Preview editing - Allows the user to edit student info UNFINISHED
 #===============================================================
