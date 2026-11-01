@@ -99,14 +99,14 @@ def create_report_form(id, term):
                 FROM students
                 WHERE id = ? 
             """
-            params = (id, term)
+            params = (id,)
             student = db.execute(sql, params).fetchone()
     
             sql = """
                 SELECT term
                 FROM reports
-                WHERE student_id = ?
-                WHERE 
+                WHERE student_id = ? AND term == ?
+    
 
             """
             params = (id, term)
