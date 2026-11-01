@@ -44,9 +44,31 @@
 
         {% if ns.report_found == false %}
           <div class="add-btn">
-                  <a href="/"><img src="/static/images/circle-plus.svg" alt="add-button-icon"></a>
+                  <a href="/student-info/{{ student.id }}/report-form/1"><img src="/static/images/circle-plus.svg" alt="add-button-icon"></a>
           </div>
         {% endif%}
+
+        {% if ns.report_found == false %}
+          <div class="add-btn">
+                  <a href="/student-info/{{ student.id }}/report-form/2"><img src="/static/images/circle-plus.svg" alt="add-button-icon"></a>
+          </div>
+        {% endif%}
+
+        {% if ns.report_found == false %}
+          <div class="add-btn">
+                  <a href="/student-info/{{ student.id }}/report-form/3"><img src="/static/images/circle-plus.svg" alt="add-button-icon"></a>
+          </div>
+        {% endif%}
+
+        {% if ns.report_found == false %}
+          <div class="add-btn">
+                  <a href="/student-info/{{ student.id }}/report-form/"><img src="/static/images/circle-plus.svg" alt="add-button-icon"></a>
+          </div>
+        {% endif%}
+
+        {% for report in reports %}
+          <p>{{ report.term }}</p>
+        {% endfor %}
 
       </div>
     {% endfor %}

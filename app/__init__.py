@@ -84,30 +84,35 @@ def show_student_info(id):
             """
             params = (id, )
             reports = db.execute(sql, params).fetchall()
-    
+    print(student)
     return render_template("pages/student-info.jinja", student=student, reports=reports)
 
 #===========================================================
-# Report Form - Makes the form to 
+# Report Form - Form for student's report for a term
 #===========================================================
-@app.get("/class-room")
-def show_class_list():
+@app.get("/student-info/<id>/report-form/<term>")
+def create_report_form(id, term):
 
     with connect_db() as db:
             sql = """
-                SELECT reports.student_id, students.name
-
-                FROM reports
-
-                JOIN students ON reports.student_id = students.id
-                
-                ORDER BY students.name ASC
+                SELECT id, name
+                FROM students
+                WHERE id = ? 
             """
-            params = ()
-            students = db.execute(sql, params).fetchall()
+            params = (id, term)
+            student = db.execute(sql, params).fetchone()
     
-    return render_template("pages/class-room.jinja", students=students)
+            sql = """
+                SELECT term
+                FROM reports
+                WHERE student_id = ?
+                WHERE 
 
+            """
+            params = (id, term)
+            reports = db.execute(sql, params).fetchall()
+    
+    return render_template("pages/report-form-page-1.jinja", student=student, reports=reports)
 
 #===============================================================
 # Report Preview editing - Allows the user to edit student info UNFINISHED

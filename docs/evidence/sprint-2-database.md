@@ -61,9 +61,9 @@ I will sort the students names A to Z and display them in this order.
 The plus button was the original link to the term selection page, for clearity I will remove the plus button and replace it by making the student's container a link itself.
 
 ![student-info-link](image-7.png)
+![student-info-link-revised](screenshots/student-class-list-button.gif)
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
-
 
 ## Testing Student Info 
 
