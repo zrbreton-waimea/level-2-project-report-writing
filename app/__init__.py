@@ -195,6 +195,10 @@ def render_report_form_4(id, term):
 @app.post("/student-info/<id>/report-form/<term>")
 def post_report_form_1(id, term):
     session["maths_measure"] = request.form.get("measurment-range")
+    session["maths_algebra"] = request.form.get("algebra-range")
+    session["maths_number"] = request.form.get("number-range")
+    session["maths_geometry"] = request.form.get("geometry-range")
+    session["maths_statistics"] = request.form.get("statistics-range")
 
     return redirect(f"/student-info/{id}/report-form/{term}/2")
 
@@ -203,7 +207,9 @@ def post_report_form_1(id, term):
 #===========================================================
 @app.post("/student-info/<id>/report-form/<term>/2")
 def post_report_form_2(id, term):
-    # session["maths_measure"] = request.form.get("measurment-range")
+    session["reading_recognition"] = request.form.get("word-recognition-range")
+    session["reading_comprehension"] = request.form.get("comprehension-range")
+    session["reading_analysis"] = request.form.get("critical-analysis-range")
 
     return redirect(f"/student-info/{id}/report-form/{term}/3")
 
@@ -212,7 +218,9 @@ def post_report_form_2(id, term):
 #===========================================================
 @app.post("/student-info/<id>/report-form/<term>/3")
 def post_report_form_3(id, term):
-    # session["maths_measure"] = request.form.get("measurment-range")
+    session["writing_transcript"] = request.form.get("transcript-range")
+    session["writing_composition"] = request.form.get("composition-range")
+    session["writing_process"] = request.form.get("writing-process-range")
 
     return redirect(f"/student-info/{id}/report-form/{term}/4")
 
@@ -221,9 +229,56 @@ def post_report_form_3(id, term):
 #===========================================================
 @app.post("/student-info/<id>/report-form/<term>/4")
 def post_report_form_4(id, term):
-    # session["maths_measure"] = request.form.get("measurment-range")
 
-    return redirect(f"/student-info/{id}")
+    session["maths_measure"] = request.form.get("measurment-range")
+    session["maths_algebra"] = request.form.get("algebra-range")
+    session["maths_number"] = request.form.get("number-range")
+    session["maths_geometry"] = request.form.get("geometry-range")
+    session["maths_statistics"] = request.form.get("statistics-range")
+
+    session["reading_recognition"] = request.form.get("word-recognition-range")
+    session["reading_comprehension"] = request.form.get("comprehension-range")
+    session["reading_analysis"] = request.form.get("critical-analysis-range")
+
+    session["writing_transcript"] = request.form.get("transcript-range")
+    session["writing_composition"] = request.form.get("composition-range")
+    session["writing_process"] = request.form.get("writing-process-range")
+
+    session["maths_comment"] = request.form.get("math-text")
+    session["reading_comment"] = request.form.get("reading-text")
+    session["writing_comment"] = request.form.get("writing-text")
+    session["behaviour_comment"] = request.form.get("behaviour-text")
+
+
+
+    sql = """
+    INSERT INTO reports (maths_meas,  maths_alge, maths_numb, maths_geom, maths_stat, maths_behaviour, maths_comment, 
+                reading_reco, reading_comp, reading_crit, reading_behaviour, reading_comment, 
+                writing_tran, writing_comp, writing_proc, writing_behaviour, writing_comment, 
+                behaviour_comment)
+    VALUES()
+    """
+    params = ()
+    # For Success Message ==================================================== #
+    with connect_db() as db:
+                sql = """
+                    SELECT name,
+                    FROM students
+                    WHERE id = ? 
+                """
+                params = ()
+                student = db.execute(sql, params).fetchone()
+
+                sql = """
+                    SELECT term
+                    FROM reports
+                    WHERE student_id = ? AND term == ?
+                """
+                params = (id, term)
+                reports = db.execute(sql, params).fetchall()
+
+    flash(f"Successfully added report to {student.name} for term {reports.term}", "success")
+    return redirect(f"/student-info/{id}", student=student, reports=reports)
 
 #===============================================================
 # Report Preview editing - Allows the user to edit student info UNFINISHED
@@ -252,7 +307,7 @@ def process_student_report_form():
         #Run the query
         db.execute(sql, params)
 
-        flash(f"{student_id} info updated successfully!")
+        flash(f"{ name } info updated successfully!")
         
     #done, redirect to the creature list page
     return redirect("/report-preview")   

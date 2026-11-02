@@ -51,22 +51,22 @@ class reports:
             maths_numb      INTEGER,
             maths_geom      INTEGER,
             maths_stat      INTEGER,
-            maths_behaviour TEXT NOT NULL,
+            maths_effort INTEGER NOT NULL,
             maths_comment   TEXT NOT NULL,
 
             reading_reco       INTEGER,
             reading_comp     INTEGER,
             reading_crit INTEGER,
-            reading_behaviour TEXT NOT NULL,
+            reading_effort INTEGER NOT NULL,
             reading_comment           TEXT NOT NULL,
 
             writing_tran    INTEGER,
             writing_comp       INTEGER,
             writing_proc   INTEGER,
-            writing_behaviour TEXT NOT NULL,
+            writing_effort INTEGER NOT NULL,
             writing_comment           TEXT NOT NULL,
 
-            overall_comment  TEXT NOT NULL,
+            behaviour_comment  TEXT NOT NULL,
         
             FOREIGN KEY(student_id) REFERENCES students(id)
         )
@@ -75,47 +75,47 @@ class reports:
     SEED_DATA = """
         INSERT INTO reports (
             student_id, term, 
-            maths_meas,  maths_alge, maths_numb, maths_geom, maths_stat, maths_behaviour, maths_comment, 
-            reading_reco, reading_comp, reading_crit, reading_behaviour, reading_comment, 
-            writing_tran, writing_comp, writing_proc, writing_behaviour, writing_comment, 
-            overall_comment 
+            maths_meas,  maths_alge, maths_numb, maths_geom, maths_stat, maths_effort, maths_comment, 
+            reading_reco, reading_comp, reading_crit, reading_effort, reading_comment, 
+            writing_tran, writing_comp, writing_proc, writing_effort, writing_comment, 
+            behaviour_comment 
         )
         VALUES
             (
                 "AD2231", 1, 
-                4, 2, 4, 4, 5, "Consistent",   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
-                4, 2, 4,       "Inconsistent", "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
-                4, 2, 4,       "Consistent",   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
+                4, 2, 4, 4, 5, 0,   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
+                4, 2, 4,       1, "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
+                4, 2, 4,       1,   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
                 "[Student Name] consistently displays a positive attitude toward learning and school life, acting as a conscientious and enthusiastic learner who takes pride in their work. They work well independently and are always willing to help peers, showing wonderful enthusiasm and bringing great energy to classroom discussions."
             ),
 
             (
                 "AD2231", 2, 
-                4, 2, 4, 4, 5, "Consistent",   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
-                4, 2, 4,       "Inconsistent", "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
-                4, 2, 4,       "Consistent",   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
+                4, 2, 4, 4, 5, 1,   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
+                4, 2, 4,       0, "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
+                4, 2, 4,       1,   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
                 "[Student Name] consistently displays a positive attitude toward learning and school life, acting as a conscientious and enthusiastic learner who takes pride in their work. They work well independently and are always willing to help peers, showing wonderful enthusiasm and bringing great energy to classroom discussions."
             ),
         
             (
                 "AD8392", 2, 
-                4, 2, 4, 4, 5, "Consistent",   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
-                4, 2, 4,       "Inconsistent", "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
-                4, 2, 4,       "Consistent",   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
+                4, 2, 4, 4, 5, 1,   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
+                4, 2, 4,       0, "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
+                4, 2, 4,       1,   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
                 "[Student Name] consistently displays a positive attitude toward learning and school life, acting as a conscientious and enthusiastic learner who takes pride in their work. They work well independently and are always willing to help peers, showing wonderful enthusiasm and bringing great energy to classroom discussions."
             ),
             (
                 "AD1312", 3, 
-                4, 2, 4, 4, 5, "Consistent",   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
-                4, 2, 4,       "Inconsistent", "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
-                4, 2, 4,       "COnsistent",   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
+                4, 2, 4, 4, 5, 1,   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
+                4, 2, 4,       0, "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
+                4, 2, 4,       1,   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
                 "[Student Name] consistently displays a positive attitude toward learning and school life, acting as a conscientious and enthusiastic learner who takes pride in their work. They work well independently and are always willing to help peers, showing wonderful enthusiasm and bringing great energy to classroom discussions."
             ),
             (
                 "AD3421", 1, 
-                4, 2, 4, 4, 5, "Consistent",   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
-                4, 2, 4,       "Inconsistent", "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
-                4, 2, 4,       "COnsistent",   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
+                4, 2, 4, 4, 5, 1,   "[Student Name] demonstrates an exceptional understanding of mathematical concepts and consistently applies creative problem-solving strategies to complex tasks. They show strong fluency with number facts and explain their mathematical reasoning clearly both verbally and in writing. Next step: Tackle open-ended extension challenges, particularly multi-step word problems requiring spatial reasoning.",
+                4, 2, 4,       0, "[Student Name] is an exceptional reader who comprehends complex texts well above grade level. They consistently analyze character motivations, identify theme and main ideas, and make thoughtful inferences supported by evidence from the text. Next step: Explore non-fiction genres and technical vocabulary to broaden critical reading skills across different subject areas.",
+                4, 2, 4,       0,   "[Student Name] is a creative and articulate writer who consistently produces highly detailed and well-structured pieces across various genres. They demonstrate an advanced command of vocabulary, sentence structure, and punctuation to engage the reader effectively. Next step: Focus on revising and editing drafts to refine figurative language and elevate tone for specific target audiences.",
                 "[Student Name] consistently displays a positive attitude toward learning and school life, acting as a conscientious and enthusiastic learner who takes pride in their work. They work well independently and are always willing to help peers, showing wonderful enthusiasm and bringing great energy to classroom discussions."
             )
     """
