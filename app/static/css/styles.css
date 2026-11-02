@@ -314,5 +314,54 @@ main > h2 {
     }
 }
 
-    
+/* Forms */
+form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
+    padding: 1rem;
+
+    button{
+        margin: 1rem;
+        max-width: 60px;
+        align-self:center ;
+    }
+}
+
+.key{
+    display: flex;
+    align-content: center;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    margin: 1rem;
+
+    h2{
+        text-align: center;
+    }
+}
+/* #maths{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#reading{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#writing{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#comments{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+} */

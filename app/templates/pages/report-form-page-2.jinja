@@ -9,16 +9,45 @@
   <header>
     <nav>
       <div class="back-btn">
-        <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+        <a href="/"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
       </div>
       <h1> Class Room </h1>
     </nav>
   </header>
 
-    <section id="reading-form">
+    <section id="reading">
+      <form class="reading-form" method="post">
 
-      
+        <h2>Word Recognition and Reading Enrichment</h2>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" name="word-recognition-range">
+          </div>
+        
+        <h2>Comprehension</h2>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" name="comprehension-range">
+          </div>
+        
+        <h2>Critical Analysis</h2>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" name="critical-analysis-range">
+          </div>
+
+        <button> Next </button>
+        
+      </form>
+
+      <div class="key">
+        <h2>Key</h2>
+          <h3>1 - Emerging</h3>
+          <h3>2 - Developing</h3>
+          <h3>3 - Consolidating</h3>
+          <h3>4 - Proficient</h3>
+          <h3>5 - Exceeding</h3>
+      </div>
 
     </section>
+
+{% endblock %}
 
 

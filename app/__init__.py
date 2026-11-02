@@ -88,10 +88,10 @@ def show_student_info(id):
     return render_template("pages/student-info.jinja", student=student, reports=reports)
 
 #===========================================================
-# Report Form - Form for student's report for a term
+# Report Form - Form for student's report for a term (Page 1)
 #===========================================================
 @app.get("/student-info/<id>/report-form/<term>")
-def create_report_form(id, term):
+def render_report_form_1(id, term):
 
     with connect_db() as db:
             sql = """
@@ -113,6 +113,117 @@ def create_report_form(id, term):
             reports = db.execute(sql, params).fetchall()
     
     return render_template("pages/report-form-page-1.jinja", student=student, reports=reports)
+
+#===========================================================
+# Report Form - Form for student's report for a term (Page 2)
+#===========================================================
+@app.get("/student-info/<id>/report-form/<term>/2")
+def render_report_form_2(id, term):
+
+    with connect_db() as db:
+            sql = """
+                SELECT id, name
+                FROM students
+                WHERE id = ? 
+            """
+            params = (id,)
+            student = db.execute(sql, params).fetchone()
+    
+            sql = """
+                SELECT term
+                FROM reports
+                WHERE student_id = ? AND term == ?
+            """
+            params = (id, term)
+            reports = db.execute(sql, params).fetchall()
+    
+    return render_template("pages/report-form-page-2.jinja", student=student, reports=reports)
+
+#===========================================================
+# Report Form - Form for student's report for a term (Page 3)
+#===========================================================
+@app.get("/student-info/<id>/report-form/<term>/3")
+def render_report_form_3(id, term):
+
+    with connect_db() as db:
+            sql = """
+                SELECT id, name
+                FROM students
+                WHERE id = ? 
+            """
+            params = (id,)
+            student = db.execute(sql, params).fetchone()
+    
+            sql = """
+                SELECT term
+                FROM reports
+                WHERE student_id = ? AND term == ?
+            """
+            params = (id, term)
+            reports = db.execute(sql, params).fetchall()
+    
+    return render_template("pages/report-form-page-3.jinja", student=student, reports=reports)
+
+#===========================================================
+# Report Form - Form for student's report for a term (Page 4)
+#===========================================================
+@app.get("/student-info/<id>/report-form/<term>/4")
+def render_report_form_4(id, term):
+
+    with connect_db() as db:
+            sql = """
+                SELECT id, name
+                FROM students
+                WHERE id = ? 
+            """
+            params = (id,)
+            student = db.execute(sql, params).fetchone()
+    
+            sql = """
+                SELECT term
+                FROM reports
+                WHERE student_id = ? AND term == ?
+            """
+            params = (id, term)
+            reports = db.execute(sql, params).fetchall()
+    
+    return render_template("pages/report-form-page-4.jinja", student=student, reports=reports)
+
+#===========================================================
+# Report Form - Form for student's report post (Page 1)
+#===========================================================
+@app.post("/student-info/<id>/report-form/<term>")
+def post_report_form_1(id, term):
+    session["maths_measure"] = request.form.get("measurment-range")
+
+    return redirect(f"/student-info/{id}/report-form/{term}/2")
+
+#===========================================================
+# Report Form - Form for student's report post (Page 2)
+#===========================================================
+@app.post("/student-info/<id>/report-form/<term>/2")
+def post_report_form_2(id, term):
+    # session["maths_measure"] = request.form.get("measurment-range")
+
+    return redirect(f"/student-info/{id}/report-form/{term}/3")
+
+#===========================================================
+# Report Form - Form for student's report post (Page 3)
+#===========================================================
+@app.post("/student-info/<id>/report-form/<term>/3")
+def post_report_form_3(id, term):
+    # session["maths_measure"] = request.form.get("measurment-range")
+
+    return redirect(f"/student-info/{id}/report-form/{term}/4")
+
+#===========================================================
+# Report Form - Form for student's report post (Page 4)
+#===========================================================
+@app.post("/student-info/<id>/report-form/<term>/4")
+def post_report_form_4(id, term):
+    # session["maths_measure"] = request.form.get("measurment-range")
+
+    return redirect(f"/student-info/{id}")
 
 #===============================================================
 # Report Preview editing - Allows the user to edit student info UNFINISHED
