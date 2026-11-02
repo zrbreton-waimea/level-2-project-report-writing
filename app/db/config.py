@@ -41,30 +41,30 @@ class reports:
 
     SCHEMA = """
         CREATE TABLE reports(
-            id      INTEGER PRIMARY KEY AUTOINCREMENT,
+            id                 INTEGER PRIMARY KEY AUTOINCREMENT,
 
-            student_id      TEXT NOT NULL,
-            term            INTEGER,
+            student_id         TEXT NOT NULL,
+            term               INTEGER,
 
-            maths_meas      INTEGER,
-            maths_alge      INTEGER,
-            maths_numb      INTEGER,
-            maths_geom      INTEGER,
-            maths_stat      INTEGER,
-            maths_effort INTEGER NOT NULL,
-            maths_comment   TEXT NOT NULL,
+            maths_meas         INTEGER,
+            maths_alge         INTEGER,
+            maths_numb         INTEGER,
+            maths_geom         INTEGER,
+            maths_stat         INTEGER,
+            maths_effort       INTEGER ,
+            maths_comment      TEXT NOT NULL,
 
             reading_reco       INTEGER,
-            reading_comp     INTEGER,
-            reading_crit INTEGER,
-            reading_effort INTEGER NOT NULL,
-            reading_comment           TEXT NOT NULL,
+            reading_comp       INTEGER,
+            reading_crit       INTEGER,
+            reading_effort     INTEGER,
+            reading_comment    TEXT NOT NULL,
 
-            writing_tran    INTEGER,
+            writing_tran       INTEGER,
             writing_comp       INTEGER,
-            writing_proc   INTEGER,
-            writing_effort INTEGER NOT NULL,
-            writing_comment           TEXT NOT NULL,
+            writing_proc       INTEGER,
+            writing_effort     INTEGER ,
+            writing_comment    TEXT NOT NULL,
 
             behaviour_comment  TEXT NOT NULL,
         

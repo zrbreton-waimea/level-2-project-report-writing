@@ -19,18 +19,24 @@
       <form class="writing-form" method="post">
 
         <h2>Transcript</h2>
-          <div class="slidecontainer">
+          <div class="slide-container">
             <input type="range" min="1" max="5" value="1" class="slider" name="transcript-range">
           </div>
         
         <h2>Composition</h2>
-          <div class="slidecontainer">
+          <div class="slide-container">
             <input type="range" min="1" max="5" value="1" class="slider" name="composition-range">
           </div>
         
         <h2>Writing Process</h2>
-          <div class="slidecontainer">
+          <div class="slide-container">
             <input type="range" min="1" max="5" value="1" class="slider" name="writing-process-range">
+          </div>
+        
+        <h2>Effort</h2>
+          <div class="checkbox-container">
+          <p>Is the student displaying a consistent effort for Writing? Tick the box for yes, leave blank for no.</p>
+            <input type="checkbox" value="consistent" name="writing-effort">
           </div>
 
         <button> Next </button>
