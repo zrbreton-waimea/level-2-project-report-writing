@@ -285,7 +285,7 @@ main > h2 {
         margin: 1rem;
     }
 
-    #term{
+    .term{
         display: flex;
         justify-content: center;
         align-items: center;
