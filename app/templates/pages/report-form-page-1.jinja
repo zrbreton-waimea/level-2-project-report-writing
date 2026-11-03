@@ -15,88 +15,95 @@
     </nav>
   </header>
 
-    <section id="maths">
+    <section class="form-page">
       <form class="maths-form" method="post">
 
-        <legend>Measurement</legend>
-          <div class="slide-container">
-            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-a" name="measurment-range">
-            <datalist id="step-list-a">
-            <option value="1" label="1"></option>
-            <option value="2" label="2"></option>
-            <option value="3" label="3"></option>
-            <option value="4" label="4"></option>
-            <option value="5" label="5"></option>
-            </datalist>
-          </div> 
+        
+          <fieldset>
+          <legend>Measurement</legend>
+            <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-a" name="measurment-range">
+              <datalist id="step-list-a">
+                <option value="1" label="1"></option>
+                <option value="2" label="2"></option>
+                <option value="3" label="3"></option>
+                <option value="4" label="4"></option>
+                <option value="5" label="5"></option>
+              </datalist>
+          </fieldset>
+           
+         <fieldset>
+          <legend>Algebra</legend> 
+            <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-b" name="algebra-range">
+              <datalist id="step-list-b">
+                <option value="1" label="1"></option>
+                <option value="2" label="2"></option>
+                <option value="3" label="3"></option>
+                <option value="4" label="4"></option>
+                <option value="5" label="5"></option>
+              </datalist>
+         </fieldset> 
+           
          
-        <legend>Algebra</legend> 
-          <div class="slide-container"> 
-            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-b" name="algebra-range">
-            <datalist id="step-list-b">
-            <option value="1" label="1"></option>
-            <option value="2" label="2"></option>
-            <option value="3" label="3"></option>
-            <option value="4" label="4"></option>
-            <option value="5" label="5"></option>
-            </datalist>
-          </div> 
          
-        <legend>Number</legend> 
-          <div class="slide-container"> 
-            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-c" name="number-range">
-            <datalist id="step-list-c">
-            <option value="1" label="1"></option>
-            <option value="2" label="2"></option>
-            <option value="3" label="3"></option>
-            <option value="4" label="4"></option>
-            <option value="5" label="5"></option>
-            </datalist>
-          </div> 
- 
-        <legend>Geometry</legend> 
-          <div class="slide-container"> 
-            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-d" name="geometry-range">
-            <datalist id="step-list-d">
-            <option value="1" label="1"></option>
-            <option value="2" label="2"></option>
-            <option value="3" label="3"></option>
-            <option value="4" label="4"></option>
-            <option value="5" label="5"></option>
-            </datalist>
-          </div> 
-         
-        <legend>Statistics</legend> 
-          <div class="slide-container"> 
-            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-e" name="statistics-range">
-            <datalist id="step-list-e">
-            <option value="1" label="1"></option>
-            <option value="2" label="2"></option>
-            <option value="3" label="3"></option>
-            <option value="4" label="4"></option>
-            <option value="5" label="5"></option>
-            </datalist>
-          </div>
+          <fieldset>
+            <legend>Number</legend>
+              <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-c" name="number-range">
+                <datalist id="step-list-c">
+                  <option value="1" label="1"></option>
+                  <option value="2" label="2"></option>
+                  <option value="3" label="3"></option>
+                  <option value="4" label="4"></option>
+                  <option value="5" label="5"></option>
+                </datalist> 
+          </fieldset>
 
-        <legend>Effort<legend>
+        
+          <fieldset>
+            <legend>Geometry</legend> 
+              <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-d" name="geometry-range">
+                <datalist id="step-list-d">
+                  <option value="1" label="1"></option>
+                  <option value="2" label="2"></option>
+                  <option value="3" label="3"></option>
+                  <option value="4" label="4"></option>
+                  <option value="5" label="5"></option>
+                </datalist>
+          </fieldset>
+         
+         
+          <fieldset>
+            <legend>Statistics</legend>
+                <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-e" name="statistics-range">
+                  <datalist id="step-list-e">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                  </datalist>
+          </fieldset>
+
+        
           <div class="checkbox-container">
-          <p>Is the student displaying a consistent effort for Maths? Tick the box for yes, leave blank for no.</p>
-            <input type="checkbox" name="maths-effort">
+            <h2>Effort</h2>
+            <p>Is the student displaying a consistent effort for Maths? Tick the box for yes, leave blank for no.</p>
+            <input type="checkbox" name="maths-effort" class="check-box">
           </div>
 
         <button> Next </button>
         
+        <div class="key">
+          <h2>Key</h2>
+            <h3>1 - Emerging</h3>
+            <h3>2 - Developing</h3>
+            <h3>3 - Consolidating</h3>
+            <h3>4 - Proficient</h3>
+            <h3>5 - Exceeding</h3>
+        </div>
       </form>
 
-      <div class="key">
-        <legend>Key</legend>
-          <h3>1 - Emerging</h3>
-          <h3>2 - Developing</h3>
-          <h3>3 - Consolidating</h3>
-          <h3>4 - Proficient</h3>
-          <h3>5 - Exceeding</h3>
-      </div>
+      
 
-    </section>
+    </section> 
 
 {% endblock %}

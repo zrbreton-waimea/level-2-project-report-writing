@@ -9,6 +9,7 @@
     --primary: #e0af9e;
     --secondary: #9c3c16;
     --accent: #fe5410;
+    --accent-faded: color-mix(in srgb, var(--accent) 50%, transparent);
 
     --dark-secondary: #5a0b0b;
     --light-secondary: color-mix(in srgb, var(--secondary)70%, white);
@@ -268,8 +269,6 @@ main > h2 {
             background-color: #555;
             
         }
-
-        
     } 
 }
     
@@ -296,8 +295,6 @@ main > h2 {
         max-width: calc(100% - 4rem);
         }
 
-        
-
         border: 2px solid var(--text);
         background-color: var(--dark-secondary);
         border-radius: 1rem;
@@ -315,57 +312,80 @@ main > h2 {
 }
 
 /* Forms */
-form{
+form {
     display: flex;
     flex-direction: column;
-    align-content: center;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    max-width: 20rem;
 
-    padding: 1rem;
+    fieldset {
+        width: 100%;
+        border-radius: 1rem;
+        background-color: var(--dark-secondary);
+        font-weight: 600;
+
+        legend {
+            padding-inline: 0.25em;
+        }
+        
+        input {
+            width: 100%;
+            accent-color: var(--accent);
+        }
+        datalist {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .checkbox-container{
+        text-align: center;
+        border: 2px solid var(--text);
+        background-color: var(--dark-secondary);
+        border-radius: 1rem;
+        padding: 1rem;
+
+        .check-box{
+            transform: scale(1.5);
+            accent-color: var(--accent);
+        }
+    }
 
     button{
-        margin: 1rem;
-        max-width: 60px;
-        align-self:center ;
+        background-color: var(--accent-faded);
+        border-radius: 0.5rem;
+        border: 2px solid var(--text);
+        padding: 0 1rem;
+        color: var(--text);
+        transition: 0.3s;
     }
 
-    datalist{
-        display: flex;
+    button:hover{
+        background-color: var(--accent);
     }
 }
+
 
 .key{
     display: flex;
     align-content: center;
     flex-direction: column; 
     flex-wrap: wrap;
-    margin: 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--text);
+    background-color: var(--secondary);
+    padding: 1rem;
+
 
     h2{
         text-align: center;
     }
 }
-/* #maths{
+
+.form-page{
     display: flex;
     justify-content: center;
     padding: 1rem;
 }
-
-#reading{
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-}
-
-#writing{
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-}
-
-#comments{
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-} */

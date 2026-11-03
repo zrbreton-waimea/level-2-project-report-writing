@@ -15,63 +15,64 @@
     </nav>
   </header>
 
-    <section id="reading">
+    <section class="form-page">
       <form class="reading-form" method="post">
 
-        <legend>Word Recognition and Reading Enrichment</legend>
-          <div class="slide-container">
-            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-f" name="word-recognition-range">
-            <datalist id="step-list-f">
-            <option value="1" label="1"></option>
-            <option value="2" label="2"></option>
-            <option value="3" label="3"></option>
-            <option value="4" label="4"></option>
-            <option value="5" label="5"></option>
-            </datalist>
-          </div>
-        
-        <legend>Comprehension</legend>
-          <div class="slide-container">
-            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-g" name="comprehension-range">
-            <datalist id="step-list-g">
-            <option value="1" label="1"></option>
-            <option value="2" label="2"></option>
-            <option value="3" label="3"></option>
-            <option value="4" label="4"></option>
-            <option value="5" label="5"></option>
-            </datalist>
-          </div>
-        
-        <legend>Critical Analysis</legend>
-          <div class="slide-container">
-            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-h" name="critical-analysis-range">
-            <datalist id="step-list-h">
-            <option value="1" label="1"></option>
-            <option value="2" label="2"></option>
-            <option value="3" label="3"></option>
-            <option value="4" label="4"></option>
-            <option value="5" label="5"></option>
-            </datalist>
-          </div>
+        <fieldset>
+          <legend>Word Recognition and Reading Enrichment</legend>
+              <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-f" name="word-recognition-range">
+                <datalist id="step-list-f">
+                  <option value="1" label="1"></option>
+                  <option value="2" label="2"></option>
+                  <option value="3" label="3"></option>
+                  <option value="4" label="4"></option>
+                  <option value="5" label="5"></option>
+                </datalist>
+        </fieldset>    
 
-        <legend>Effort</legend>
-          <div class="checkbox-container">
+        <fieldset>
+          <legend>Comprehension</legend>
+              <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-g" name="comprehension-range">
+                <datalist id="step-list-g">
+                  <option value="1" label="1"></option>
+                  <option value="2" label="2"></option>
+                  <option value="3" label="3"></option>
+                  <option value="4" label="4"></option>
+                  <option value="5" label="5"></option>
+                </datalist>
+        </fieldset>      
+        
+        <fieldset>
+          <legend>Critical Analysis</legend>
+              <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-h" name="critical-analysis-range">
+                <datalist id="step-list-h">
+                  <option value="1" label="1"></option>
+                  <option value="2" label="2"></option>
+                  <option value="3" label="3"></option>
+                  <option value="4" label="4"></option>
+                  <option value="5" label="5"></option>
+                </datalist>
+        </fieldset>    
+
+        <div class="checkbox-container">
+          <h2>Effort</h2>
           <p>Is the student displaying a consistent effort for Reading? Tick the box for yes, leave blank for no.</p>
-            <input type="checkbox" name="reading-effort">
-          </div>
+          <input type="checkbox" name="reading-effort" class="check-box">
+        </div>
 
         <button> Next </button>
-        
-      </form>
 
       <div class="key">
-        <legend>Key</legend>
+        <h2>Key</h2>
           <h3>1 - Emerging</h3>
           <h3>2 - Developing</h3>
           <h3>3 - Consolidating</h3>
-          <h3>4 - Proficient</h3>
+          <h3>4 - Proficient</h3> 
           <h3>5 - Exceeding</h3>
       </div>
+      </form>
+
+      
 
     </section>
 
