@@ -51,8 +51,8 @@ class reports:
             maths_numb         INTEGER,
             maths_geom         INTEGER,
             maths_stat         INTEGER,
-            maths_effort       INTEGER ,
-            maths_comment      TEXT NOT NULL,
+            maths_effort       INTEGER,
+            maths_comment      TEXT,
 
             reading_reco       INTEGER,
             reading_comp       INTEGER,

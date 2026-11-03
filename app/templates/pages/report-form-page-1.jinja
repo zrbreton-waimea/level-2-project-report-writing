@@ -18,35 +18,70 @@
     <section id="maths">
       <form class="maths-form" method="post">
 
-        <h2>Measurement</h2>
+        <legend>Measurement</legend>
           <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="measurment-range">
-          </div>
-        
-        <h2>Algebra</h2>
-          <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="algebra-range">
-          </div>
-        
-        <h2>Number</h2>
-          <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="number-range">
+            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-a" name="measurment-range">
+            <datalist id="step-list-a">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
+          </div> 
+         
+        <legend>Algebra</legend> 
+          <div class="slide-container"> 
+            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-b" name="algebra-range">
+            <datalist id="step-list-b">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
+          </div> 
+         
+        <legend>Number</legend> 
+          <div class="slide-container"> 
+            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-c" name="number-range">
+            <datalist id="step-list-c">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
+          </div> 
+ 
+        <legend>Geometry</legend> 
+          <div class="slide-container"> 
+            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-d" name="geometry-range">
+            <datalist id="step-list-d">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
+          </div> 
+         
+        <legend>Statistics</legend> 
+          <div class="slide-container"> 
+            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-e" name="statistics-range">
+            <datalist id="step-list-e">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
           </div>
 
-        <h2>Geometry</h2>
-          <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="geometry-range">
-          </div>
-        
-        <h2>Statistics</h2>
-          <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="statistics-range">
-          </div>
-
-        <h2>Effort</h2>
+        <legend>Effort<legend>
           <div class="checkbox-container">
           <p>Is the student displaying a consistent effort for Maths? Tick the box for yes, leave blank for no.</p>
-            <input type="checkbox" value="consistent" name="maths-effort">
+            <input type="checkbox" name="maths-effort">
           </div>
 
         <button> Next </button>
@@ -54,7 +89,7 @@
       </form>
 
       <div class="key">
-        <h2>Key</h2>
+        <legend>Key</legend>
           <h3>1 - Emerging</h3>
           <h3>2 - Developing</h3>
           <h3>3 - Consolidating</h3>

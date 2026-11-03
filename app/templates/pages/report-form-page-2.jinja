@@ -18,25 +18,46 @@
     <section id="reading">
       <form class="reading-form" method="post">
 
-        <h2>Word Recognition and Reading Enrichment</h2>
+        <legend>Word Recognition and Reading Enrichment</legend>
           <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="word-recognition-range">
+            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-f" name="word-recognition-range">
+            <datalist id="step-list-f">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
           </div>
         
-        <h2>Comprehension</h2>
+        <legend>Comprehension</legend>
           <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="comprehension-range">
+            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-g" name="comprehension-range">
+            <datalist id="step-list-g">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
           </div>
         
-        <h2>Critical Analysis</h2>
+        <legend>Critical Analysis</legend>
           <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="critical-analysis-range">
+            <input type="range" min="1" max="5" step="1" class="slider" list="step-list-h" name="critical-analysis-range">
+            <datalist id="step-list-h">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
           </div>
 
-        <h2>Effort</h2>
+        <legend>Effort</legend>
           <div class="checkbox-container">
           <p>Is the student displaying a consistent effort for Reading? Tick the box for yes, leave blank for no.</p>
-            <input type="checkbox" value="consistent" name="reading-effort">
+            <input type="checkbox" name="reading-effort">
           </div>
 
         <button> Next </button>
@@ -44,7 +65,7 @@
       </form>
 
       <div class="key">
-        <h2>Key</h2>
+        <legend>Key</legend>
           <h3>1 - Emerging</h3>
           <h3>2 - Developing</h3>
           <h3>3 - Consolidating</h3>

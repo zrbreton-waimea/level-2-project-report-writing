@@ -1,12 +1,14 @@
 # Report Writer
 
+By Zander Breton
+
 ## Project Description
 
 This is an app that will allow teachers to generate reports for students.
 
 The app has the following key features:
-- Feature one
-- Feature two
+- A class list of imported students
+- 
 - Feature three
 - ...
 
@@ -17,13 +19,17 @@ https://level-2-project-report-writing.onrender.com/
 ## Supporting Documents
 
 Task Instructions:
+
+*For easier reading, the docs are hosted as a [GH Pages site](https://zrbreton-waimea.github.io/level-2-project-report-writing/)*
+
 - [Instruction documents](docs/instructions/)
 
 Project Evidence
 - [Sprint 0: Project Requirements](docs/evidence/sprint-0-requirements.md)
 - [Sprint 1: Prototype Development](docs/evidence/sprint-1-prototype.md)
-- [Sprint 2: MVP Development](docs/evidence/sprint-2-mvp.md)
-- [Sprint 3: Final System Development](docs/evidence/sprint-3-final.md)
+- [Sprint 2: Database](docs/evidence/sprint-2-database.md)
+- [Sprint 3: MVP Development](docs/evidence/sprint-3-mvp.md)
+- [Sprint 4: Final System Development](docs/evidence/sprint-4-final.md)
 - [Review: Project Final Review](docs/evidence/system-review.md)
 
 
@@ -44,7 +50,7 @@ See the [docs folder](docs) for a quick-start and guides to usage. In particular
 - [DB Schema](docs/guides/schema.md)
 - [SQL Queries](docs/guides/sqlite.md)
 
-*For easier reading, the docs are hosted as a [GH Pages site](https://zrbreton-waimea.github.io/level-2-project-report-writing/)*
+
 
 
 ## Project Structure

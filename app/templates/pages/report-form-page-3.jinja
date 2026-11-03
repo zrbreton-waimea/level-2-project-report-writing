@@ -18,25 +18,46 @@
     <section id="writing">
       <form class="writing-form" method="post">
 
-        <h2>Transcript</h2>
+        <legend>Transcript</legend>
           <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="transcript-range">
+            <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-i" name="transcript-range">
+            <datalist id="step-list-i">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
           </div>
         
-        <h2>Composition</h2>
+        <legend>Composition</legend>
           <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="composition-range">
+            <input type="range" min="1" max="5" step="1" valegende="1" class="slider" list="step-list-j" name="composition-range">
+            <datalist id="step-list-j">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
           </div>
         
-        <h2>Writing Process</h2>
+        <legend>Writing Process</legend>
           <div class="slide-container">
-            <input type="range" min="1" max="5" value="1" class="slider" name="writing-process-range">
+            <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-k" name="writing-process-range">
+            <datalist id="step-list-k">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            </datalist>
           </div>
         
-        <h2>Effort</h2>
+        <legend>Effort</legend>
           <div class="checkbox-container">
           <p>Is the student displaying a consistent effort for Writing? Tick the box for yes, leave blank for no.</p>
-            <input type="checkbox" value="consistent" name="writing-effort">
+            <input type="checkbox" name="writing-effort">
           </div>
 
         <button> Next </button>
@@ -44,7 +65,7 @@
       </form>
 
       <div class="key">
-        <h2>Key</h2>
+        <legend>Key</legend>
           <h3>1 - Emerging</h3>
           <h3>2 - Developing</h3>
           <h3>3 - Consolidating</h3>

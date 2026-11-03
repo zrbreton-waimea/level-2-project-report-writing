@@ -25,12 +25,7 @@ app = Flask(__name__)
 #-----------------------------------------------------------
 @app.get("/")
 def show_notes():
-        flash("Test message")
-        flash("Test SUCCESS message", "success")
-        flash("Test INFO message", "info")
-        flash("Test WARNING message", "warning")
-        flash("Test ERROR message", "error")
-
+        session.clear()
         return render_template("pages/index.jinja")
 
 #===========================================================
@@ -200,7 +195,7 @@ def post_report_form_1(id, term):
     session["maths_geometry"] = request.form.get("geometry-range")
     session["maths_statistics"] = request.form.get("statistics-range")
 
-    session["maths_effort"] = request.form.get("maths-effort")
+    session["maths_effort"] = 1 if request.form.get("maths-effort") else 0
 
     return redirect(f"/student-info/{id}/report-form/{term}/2")
 
@@ -213,7 +208,7 @@ def post_report_form_2(id, term):
     session["reading_comprehension"] = request.form.get("comprehension-range")
     session["reading_analysis"] = request.form.get("critical-analysis-range")
 
-    session["reading_effort"] = request.form.get("reading-effort")
+    session["reading_effort"] = 1 if request.form.get("reading-effort") else 0
 
     return redirect(f"/student-info/{id}/report-form/{term}/3")
 
@@ -222,11 +217,13 @@ def post_report_form_2(id, term):
 #===========================================================
 @app.post("/student-info/<id>/report-form/<term>/3")
 def post_report_form_3(id, term):
+    consistent = 1 if request.form.get("consistent") else 0
+
     session["writing_transcript"] = request.form.get("transcript-range")
     session["writing_composition"] = request.form.get("composition-range")
     session["writing_process"] = request.form.get("writing-process-range")
 
-    session["writing_effort"] = request.form.get("writing-effort")
+    session["writing_effort"] = 1 if request.form.get("writing-effort") else 0
 
     return redirect(f"/student-info/{id}/report-form/{term}/4")
 
@@ -235,59 +232,50 @@ def post_report_form_3(id, term):
 #===========================================================
 @app.post("/student-info/<id>/report-form/<term>/4")
 def post_report_form_4(id, term):
+    
 
-    session["maths_comment"] = request.form.get("math-text")
-    session["reading_comment"] = request.form.get("reading-text")
-    session["writing_comment"] = request.form.get("writing-text")
-    session["behaviour_comment"] = request.form.get("behaviour-text")
+    maths_measure =         session["maths_measure"]
+    maths_algebra =         session["maths_algebra"]
+    maths_number =          session["maths_number"]
+    maths_geometry =        session["maths_geometry"]
+    maths_statistics =      session["maths_statistics"]
+    maths_effort =          session["maths_effort"]
+    maths_comment =         request.form.get("math-text")
 
-    maths_measure =    session["maths_measure"]
-    maths_algebra =    session["maths_algebra"]
-    maths_number =     session["maths_number"]
-    maths_geometry =   session["maths_geometry"]
-    maths_statistics = session["maths_statistics"]
-    maths_effort =     session["maths_effort"]
 
     reading_recognition =   session["reading_recognition"]
     reading_comprehension = session["reading_comprehension"]
     reading_analysis =      session["reading_analysis"]
     reading_effort =        session["reading_effort"]
+    reading_comment =       request.form.get("reading-text")
 
-    writing_transcript =  session["writing_transcript"]
-    writing_composition = session["writing_composition"]
-    writing_process =     session["writing_process"]
-    writing_effort =      session["writing_process"]
+    writing_transcript =    session["writing_transcript"]
+    writing_composition =   session["writing_composition"]
+    writing_process =       session["writing_process"]
+    writing_effort =        session["writing_process"]
+    writing_comment =       request.form.get("writing-text")
 
-    sql = """
-    INSERT INTO reports (maths_meas,  maths_alge, maths_numb, maths_geom, maths_stat, maths_effort, maths_comment, 
-                reading_reco, reading_comp, reading_crit, reading_effort, reading_comment, 
-                writing_tran, writing_comp, writing_proc, writing_effort, writing_comment, 
-                behaviour_comment)
-    VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """
-    params = (maths_measure, maths_algebra, maths_number, maths_geometry, maths_statistics, maths_effort, reading_recognition, 
-              reading_comprehension, reading_analysis, reading_effort, writing_transcript,  writing_composition, writing_process, 
-            writing_effort,)
+    behaviour_comment =     request.form.get("behaviour-text")
+
+    student_id = id
+    term_number = term
+
+    with connect_db() as db:
+        sql = """
+        INSERT INTO reports (student_id, term, maths_meas,  maths_alge, maths_numb, maths_geom, maths_stat, maths_effort, maths_comment, 
+                    reading_reco, reading_comp, reading_crit, reading_effort, reading_comment, 
+                    writing_tran, writing_comp, writing_proc, writing_effort, writing_comment, 
+                    behaviour_comment)
+        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """
+        params = (student_id, term_number, maths_measure, maths_algebra, maths_number, maths_geometry, maths_statistics, maths_effort, maths_comment, reading_recognition, 
+                reading_comprehension, reading_analysis, reading_effort, reading_comment, writing_transcript,  writing_composition, writing_process, 
+                writing_effort, writing_comment, behaviour_comment)
+        
+        db.execute(sql, params)
     
     # For Success Message ==================================================== #
-    with connect_db() as db:
-                sql = """
-                    SELECT name
-                    FROM students
-                    WHERE id = ? 
-                """
-                params = (id,)
-                student = db.execute(sql, params).fetchone()
-
-                sql = """
-                    SELECT term
-                    FROM reports
-                    WHERE student_id = ? AND term == ?
-                """
-                params = (id, term)
-                reports = db.execute(sql, params).fetchall()
-
-    flash(f"Successfully added report to {student['name']} for term {term}", "success")
+    flash(f"Successfully added report for student {id}, for term {term}!", "success")
     return redirect(f"/student-info/{id}",)
 
 #===============================================================
