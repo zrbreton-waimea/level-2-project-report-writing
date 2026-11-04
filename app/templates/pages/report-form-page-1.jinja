@@ -9,7 +9,7 @@
   <header>
     <nav>
       <div class="back-btn">
-        <a href="/"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+        <a href="/student-info/{{ student.id }}"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
       </div>
       <h1>Subject Performance</h1>
     </nav>
@@ -17,7 +17,17 @@
 
     <section class="form-page">
       <form class="maths-form" method="post">
-
+      
+        <div class="key">
+          <h2>Key</h2>
+            <div class="keys">
+              <h3>1 - Emerging</h3>
+              <h3>2 - Developing</h3>
+              <h3>3 - Consolidating</h3>
+              <h3>4 - Proficient</h3>
+              <h3>5 - Exceeding</h3>
+            </div>
+        </div>
         
           <fieldset>
           <legend>Measurement</legend>
@@ -42,9 +52,7 @@
                 <option value="5" label="5"></option>
               </datalist>
          </fieldset> 
-           
-         
-         
+          
           <fieldset>
             <legend>Number</legend>
               <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-c" name="number-range">
@@ -57,7 +65,6 @@
                 </datalist> 
           </fieldset>
 
-        
           <fieldset>
             <legend>Geometry</legend> 
               <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-d" name="geometry-range">
@@ -69,8 +76,7 @@
                   <option value="5" label="5"></option>
                 </datalist>
           </fieldset>
-         
-         
+        
           <fieldset>
             <legend>Statistics</legend>
                 <input type="range" min="1" max="5" step="1" value="1" class="slider" list="step-list-e" name="statistics-range">
@@ -83,7 +89,6 @@
                   </datalist>
           </fieldset>
 
-        
           <div class="checkbox-container">
             <h2>Effort</h2>
             <p>Is the student displaying a consistent effort for Maths? Tick the box for yes, leave blank for no.</p>
@@ -92,14 +97,7 @@
 
         <button> Next </button>
         
-        <div class="key">
-          <h2>Key</h2>
-            <h3>1 - Emerging</h3>
-            <h3>2 - Developing</h3>
-            <h3>3 - Consolidating</h3>
-            <h3>4 - Proficient</h3>
-            <h3>5 - Exceeding</h3>
-        </div>
+        
       </form>
 
       

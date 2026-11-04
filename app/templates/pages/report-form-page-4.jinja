@@ -9,7 +9,7 @@
   <header>
     <nav>
       <div class="back-btn">
-        <a href="/"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+        <a href="/report-form-page-3.jinja"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
       </div>
       <h1> Class Room </h1>
     </nav>
@@ -20,36 +20,27 @@
 
           <div class="text-input">
             <legend>Maths</legend>
-            <input type="text" name="math-text">
+            <textarea type="text" name="math-text"></textarea>
           </div>
         
           <div class="text-input">
             <legend>Reading</legend>
-            <input type="text" name="reading-text">
+            <textarea type="text" name="reading-text"></textarea>
           </div>
         
           <div class="text-input">
             <legend>Writing</legend>
-            <input type="text" name="writing-text">
+            <textarea type="text" name="writing-text"></textarea>
           </div>
 
           <div class="text-input">
             <legend>Behaviour</legend>
-            <input type="text" name="behaviour-text">
+            <textarea type="text" name="behaviour-text"></textarea>
           </div>
 
         <button> Next </button>
         
       </form>
-
-      <div class="key">
-        <h2>Key</h2>
-          <h3>1 - Emerging</h3>
-          <h3>2 - Developing</h3>
-          <h3>3 - Consolidating</h3>
-          <h3>4 - Proficient</h3>
-          <h3>5 - Exceeding</h3>
-      </div>
     </section>
 
 {% endblock %}

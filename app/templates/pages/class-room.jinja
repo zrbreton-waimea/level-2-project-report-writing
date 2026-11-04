@@ -19,18 +19,15 @@
 
     <section id="class-list">
 
-      {% for student in students %}
-          <a href="/student-info/{{ student.student_id }}" class="student">
-            <h2>{{ student.student_id   }}</h2>
-            <div id="divider"></div>
-            <h2>{{ student.name }}</h2>
-          <a>
-        
+      {% for student in students %} 
+        <a href="/student-info/{{ student.id }}" class="student">
+              <h2>{{ student.id   }}</h2>
+              <div id="divider"></div>
+              <h2>{{ student.name }}</h2>
 
         {% else %}
-
-          <p>There are no reports to view! Sit back and relax, go watch some <a href="https://www.netflix.com">Netflix.</a></p>
-
+        <p>There are no reports to view! Sit back and relax, go watch some <a href="https://www.netflix.com">Netflix.</a></p>
+      
       {% endfor %}
 
     </section>

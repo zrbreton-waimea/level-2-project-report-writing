@@ -36,7 +36,7 @@ body {
 
 main {
     margin-inline: auto;    
-
+    
     .add-btn{
         border-radius: 100%;
         backdrop-filter: blur(16px);
@@ -68,11 +68,6 @@ nav{
     grid-template-columns: 1fr auto 1fr;
     justify-content: center;
     align-items: center;
-
-    h1{
-        text-decoration: underline;
-        
-    }
     
     .back-btn{
         margin: 1rem;
@@ -318,7 +313,12 @@ form {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    max-width: 20rem;
+    max-width: 22rem;
+
+    textarea{
+        resize: vertical;
+        width: 20rem;
+    }
 
     fieldset {
         width: 100%;
@@ -334,6 +334,7 @@ form {
             width: 100%;
             accent-color: var(--accent);
         }
+
         datalist {
             display: flex;
             justify-content: space-between;
@@ -369,18 +370,22 @@ form {
 
 
 .key{
-    display: flex;
-    align-content: center;
-    flex-direction: column; 
-    flex-wrap: wrap;
     border-radius: 1rem;
     border: 2px solid var(--text);
     background-color: var(--secondary);
-    padding: 1rem;
+    
+    flex-wrap: wrap;
+    padding: 0.5rem;
 
+    .keys{
+        gap: 0.4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     h2{
         text-align: center;
+        text-decoration: underline;
     }
 }
 

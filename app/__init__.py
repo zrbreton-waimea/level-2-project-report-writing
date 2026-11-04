@@ -43,13 +43,9 @@ def show_class_list():
 
     with connect_db() as db:
             sql = """
-                SELECT reports.student_id, students.name
-
-                FROM reports
-
-                JOIN students ON reports.student_id = students.id
-                
-                ORDER BY students.name ASC
+                SELECT id, name
+                FROM students
+                ORDER BY name ASC
             """
             params = ()
             students = db.execute(sql, params).fetchall()
