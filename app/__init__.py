@@ -57,6 +57,7 @@ def show_class_list():
 #===========================================================
 @app.get("/student-info/<id>")
 def show_student_info(id):
+    consistent = 1 if request.form.get("consistent") else 0
 
     with connect_db() as db:
             sql = """
@@ -70,7 +71,7 @@ def show_student_info(id):
             sql = """
                 SELECT term
                 FROM reports
-                WHERE student_id = ?
+                WHERE student_id = ? 
 
             """
             params = (id, )
@@ -274,37 +275,23 @@ def post_report_form_4(id, term):
     flash(f"Successfully added report for student {id}, for term {term}!", "success")
     return redirect(f"/student-info/{id}",)
 
-#===============================================================
-# Report Preview editing - Allows the user to edit student info UNFINISHED
-#===============================================================
-@app.post("/class/update")
-def process_student_report_form():
-    #Get the form data
-    maths_measure    = request.form.get("maths_meas", "unknown").strip()
-    maths_algebra    = request.form.get("maths_alge ", "unknown").strip()
-    maths_number     = request.form.get("maths_numb", "unknown").strip()
-    maths_geometry   = request.form.get("maths_geom", "unknown").strip()
-    maths_statistics = request.form.get("maths_stat", "unknown").strip()
-    maths_behaviour  = request.form.get("maths_behaviour", "unknown").strip()
-
-    student_id = request.form.get("id", "unknown").strip()
-
-    #Connect to the database
+#===========================================================
+# Report Form - Delete a student from the class list.
+#===========================================================
+@app.get("/student-info/<id>/delete")
+def delete_student_info(id):
+    
     with connect_db() as db:
-        sql = """ 
-            INSERT INTO reports ()
-            VALUES (?, ?)
-        """
+            sql = """
+                DELETE FROM students
+                WHERE id = ?
+            """
+            params = (id, )
+            student = db.execute(sql, params)
 
-        params = (maths_measure, maths_algebra, maths_number, maths_geometry, maths_statistics, maths_behaviour)        
-        
-        #Run the query
-        db.execute(sql, params)
+    return redirect("/class-room",)
 
-        flash(f"{ name } info updated successfully!")
-        
-    #done, redirect to the creature list page
-    return redirect("/report-preview")   
+
 
 #===========================================================
 # Configure the app

@@ -40,10 +40,10 @@ class reports:
     NAME = "reports"
 
     SCHEMA = """
-        CREATE TABLE reports(
+        CREATE TABLE reports (
             id                 INTEGER PRIMARY KEY AUTOINCREMENT,
 
-            student_id         TEXT NOT NULL,
+            student_id         TEXT REFERENCES students (id) ON DELETE CASCADE, 
             term               INTEGER,
 
             maths_meas         INTEGER,
@@ -66,9 +66,7 @@ class reports:
             writing_effort     INTEGER ,
             writing_comment    TEXT NOT NULL,
 
-            behaviour_comment  TEXT NOT NULL,
-        
-            FOREIGN KEY(student_id) REFERENCES students(id)
+            behaviour_comment  TEXT NOT NULL
         )
     """
 
