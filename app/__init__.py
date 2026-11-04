@@ -128,7 +128,7 @@ def render_report_form_2(id, term):
             params = (id, term)
             reports = db.execute(sql, params).fetchall()
     
-    return render_template("pages/report-form-page-2.jinja", student=student, reports=reports)
+    return render_template("pages/report-form-page-2.jinja", student=student, reports=reports, term=term)
 
 #===========================================================
 # Report Form - Form for student's report for a term (Page 3)
@@ -153,7 +153,7 @@ def render_report_form_3(id, term):
             params = (id, term)
             reports = db.execute(sql, params).fetchall()
     
-    return render_template("pages/report-form-page-3.jinja", student=student, reports=reports)
+    return render_template("pages/report-form-page-3.jinja", student=student, reports=reports, term=term)
 
 #===========================================================
 # Report Form - Form for student's report for a term (Page 4)
@@ -178,7 +178,7 @@ def render_report_form_4(id, term):
             params = (id, term)
             reports = db.execute(sql, params).fetchall()
     
-    return render_template("pages/report-form-page-4.jinja", student=student, reports=reports)
+    return render_template("pages/report-form-page-4.jinja", student=student, reports=reports, term=term)
 
 #===========================================================
 # Report Form - Form for student's report post (Page 1)
