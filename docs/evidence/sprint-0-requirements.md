@@ -36,9 +36,6 @@ I plan to make the report writing app stream lined and easy to use by:
 
 Gareth's feedback - "The report writing app needs to be easy to use and enable some comments to be customised to provide a certain level of personalised tone to the report comments.
 
-
-
-
 ### Relevance to the System
 
 The use of Usability for my report writing generator is important as the main goal is to simplify the process for teachers of report writing. Report writing is time consuming and the system I am making should speed up this process not slow it down. This will be done using the hueristics mentioned above.

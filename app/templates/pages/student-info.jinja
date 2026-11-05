@@ -26,7 +26,7 @@
     <div class="delete-btn">
       <a href="/student-info/{{ student.id }}/delete"><img src="/static/images/trash.svg" alt="back-button-icon"></a>
     </div>
-    
+
     <div class="terms">
 
     {% for term in range(1, 5) %}
@@ -39,7 +39,9 @@
         {% for report in reports %}
           {% if report.term == term %}
 
-             <p>The student has a report for this term.</p>
+            <a href="" id="report-view-btn">View Report</a>
+
+             <a type="button" href="/student-info/{{ student.id }}/report-form/{{ term }}/edit" class="edit-btn">Edit</a>
 
               {% set ns.report_found = true %}
             </div>

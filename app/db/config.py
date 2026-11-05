@@ -43,7 +43,7 @@ class reports:
         CREATE TABLE reports (
             id                 INTEGER PRIMARY KEY AUTOINCREMENT,
 
-            student_id         TEXT REFERENCES students (id) ON DELETE CASCADE, 
+            student_id         TEXT REFERENCES students (id) ON DELETE CASCADE ON UPDATE CASCADE, 
             term               INTEGER,
 
             maths_meas         INTEGER,

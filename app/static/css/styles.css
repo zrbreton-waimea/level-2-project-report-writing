@@ -283,7 +283,6 @@ main > h2 {
         justify-self: end;
         align-self: center;
         
-
         img{
             width: var(--button-scale);
             height: var(--button-scale); 

@@ -1,0 +1,47 @@
+{#=====================================================
+  Home page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+  <header>
+    <nav>
+      <div class="back-btn">
+        <a href="/student-info/{{ student.id }}/report-form/{{ term }}/edit"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+      </div>
+      <h1> Class Room </h1>
+    </nav>
+  </header>
+
+    <section class="form-page">
+      <form class="comments-form" method="post">
+
+          <div class="text-input">
+            <legend>Maths</legend>
+            <textarea type="text" name="math-text">{{ reports.maths_comment }}</textarea>
+          </div>
+        
+          <div class="text-input">
+            <legend>Reading</legend>
+            <textarea type="text" name="reading-text">{{ reports.reading_comment }}</textarea>
+          </div>
+        
+          <div class="text-input">
+            <legend>Writing</legend>
+            <textarea type="text" name="writing-text">{{ reports.writing_comment }}</textarea>
+          </div>
+
+          <div class="text-input">
+            <legend>Behaviour</legend>
+            <textarea type="text" name="behaviour-text">{{ reports.behaviour_comment }}</textarea>
+          </div>
+
+        <button> Next </button>
+        
+      </form>
+    </section>
+
+{% endblock %}
+

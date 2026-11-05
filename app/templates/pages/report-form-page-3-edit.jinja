@@ -1,0 +1,83 @@
+{#=====================================================
+  Home page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+  <header>
+    <nav>
+      <div class="back-btn">
+        <a href="/student-info/{{ student.id }}/report-form/{{ term }}/2/edit"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+      </div>
+      <h1> Class Room </h1>
+    </nav>
+  </header>
+
+    <section class="form-page">
+      <form class="writing-form" method="post">
+
+        <div class="key">
+          <h2>Key</h2>
+            <div class="keys">
+              <h3>1 - Emerging</h3>
+              <h3>2 - Developing</h3>
+              <h3>3 - Consolidating</h3>
+              <h3>4 - Proficient</h3>
+              <h3>5 - Exceeding</h3>
+            </div>
+        </div>
+
+        <legend>Transcript</legend>
+          <fieldset>
+            <input type="range" min="1" max="5" step="1" value="{{ reports.writing_tran }}" class="slider" list="step-list-i" name="transcript-range">
+              <datalist id="step-list-i">
+                <option value="1" label="1"></option>
+                <option value="2" label="2"></option>
+                <option value="3" label="3"></option>
+                <option value="4" label="4"></option>
+                <option value="5" label="5"></option>
+              </datalist>
+          </fieldset>
+        
+        <legend>Composition</legend>
+          <fieldset>
+            <input type="range" min="1" max="5" step="1" value="{{ reports.writing_comp }}" class="slider" list="step-list-j" name="composition-range">
+              <datalist id="step-list-j">
+                <option value="1" label="1"></option>
+                <option value="2" label="2"></option>
+                <option value="3" label="3"></option>
+                <option value="4" label="4"></option>
+                <option value="5" label="5"></option>
+              </datalist>
+          </fieldset>
+        
+        <legend>Writing Process</legend>
+          <fieldset>
+            <input type="range" min="1" max="5" step="1" value="{{ reports.writing_proc }}" class="slider" value="1" list="step-list-k" name="writing-process-range">
+              <datalist id="step-list-k">
+                <option value="1" label="1"></option>
+                <option value="2" label="2"></option>
+                <option value="3" label="3"></option>
+                <option value="4" label="4"></option>
+                <option value="5" label="5"></option>
+              </datalist>
+          </fieldset>
+
+        
+        
+          <div class="checkbox-container">
+            <h2>Effort</h2>
+            <p>Is the student displaying a consistent effort for Writing? Tick the box for yes, leave blank for no.</p>
+            <input type="checkbox" name="writing-effort" class="check-box">
+          </div>
+
+        <button> Next </button>
+        
+      </form>
+
+    </section>
+
+{% endblock %}
+
