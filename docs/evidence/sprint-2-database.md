@@ -67,22 +67,35 @@ The plus button was the original link to the term selection page, for clearity I
 
 ## Testing Student Info 
 
-I will be testing whether the info of the student can be displayed using seed data when selecting someone from the list.
+I will be testing whether a report of the student can be displayed using seed data when selecting someone from the list for any term.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
-
+![student-report-sample](screenshots/student-report-sample.gif)
 
 ### Changes / Improvements
-
-Replace this text with notes any improvements you made as a result of the testing.
+No changes were made to the strauture of the database.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 
+## Testing Class Room List
 
-## ETC...
+I will test whether multiple students can be shown on the classroom list using seed data.
 
+![class-list](image.png)
+
+### Changes / Improvements
+No changes were made to the strauture of the database.
+
+## Testing Student Info
+
+I will test whether student info will show the corrosponding term data. 
+
+![student-info](screenshots/student-info.gif)
+
+### Changes / Improvements
+No changes were made to the strauture of the database.
 
 ## Sprint Review
 
-Replace this text with a statement about how the sprint has moved the project forward - key success point, any things that didn't go so well, etc.
+In reflection, there was a major oversite for my data base at the beginning of this sprint, through the feedback of my stakeholder I was able to restructure and create a functional database that met the requirments set by my stakeholder. Through this improvement of my data base it has allowed me to more efficiently display data.
 
