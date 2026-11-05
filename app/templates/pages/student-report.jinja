@@ -1,0 +1,199 @@
+{#=====================================================
+  Home page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+  <header>
+    <nav>
+      <div class="back-btn">
+        <a href="/class-room"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+      </div>
+      <h1> Student Report </h1>
+    </nav>
+  </header>
+
+  <section class="student-report">
+
+    <div class="student-data">
+      <h2>Name: {{ student.name }}</h2>
+      <div id="divider"></div>
+      <h3>Student ID: {{ student.id }}</h3>
+    </div>  
+
+      <div class="report-term">
+
+        <div id="term-header">
+          <h1>Term: {{term}}</h1>
+        </div>
+
+        <div class="key">
+          <h2>Key</h2>
+            <div class="keys">
+              <h3>1. Emerging</h3> <p>- Your child is starting to learn basic skills and needs regular support to reach their goals.</p>
+              <h3>2. Developing</h3> <p>- Your child is practicing new skills and can use them with help from the teacher.</p>
+              <h3>3. Consolidating</h3> <p>- Your child is becoming secure in these skills and uses them on their own most of the time.</p>
+              <h3>4. Proficient</h3> <p>- Your child fully meets the standard for their year level and is ready for the next learning year.</p>
+              <h3>5. Exceeding</h3> <p>- Your child is working confidently beyond the expected standard for their year level.</p>
+            </div>
+        </div>
+        
+          <div class="subject">
+            <h1>Reading</h1>
+            
+              <h3>Effort: {{ reading_effort_label }}</h3>
+              <p> {{reports.reading_comment }}</p>
+          
+            <fieldset>
+              <h2>Word Recognition and Reading Enrichment</h2>
+                  <input type="range" min="1" max="5" step="1" value="{{ reports.reading_reco }}" class="slider" list="step-list-f" name="word-recognition-range">
+                    <datalist id="step-list-f">
+                      <option value="1" label="1"></option>
+                      <option value="2" label="2"></option>
+                      <option value="3" label="3"></option>
+                      <option value="4" label="4"></option>
+                      <option value="5" label="5"></option>
+                    </datalist>
+            </fieldset>    
+
+            <fieldset>
+              <h2>Comprehension</h2>
+                  <input type="range" min="1" max="5" step="1" value="{{ reports.reading_comp }}" class="slider" list="step-list-g" name="comprehension-range">
+                    <datalist id="step-list-g">
+                      <option value="1" label="1"></option>
+                      <option value="2" label="2"></option>
+                      <option value="3" label="3"></option>
+                      <option value="4" label="4"></option>
+                      <option value="5" label="5"></option>
+                    </datalist>
+            </fieldset>      
+          
+            <fieldset>
+              <h2>Critical Analysis</h2>
+                  <input type="range" min="1" max="5" step="1" value="{{ reports.reading_crit }}" class="slider" list="step-list-h" name="critical-analysis-range">
+                    <datalist id="step-list-h">
+                      <option value="1" label="1"></option>
+                      <option value="2" label="2"></option>
+                      <option value="3" label="3"></option>
+                      <option value="4" label="4"></option>
+                      <option value="5" label="5"></option>
+                    </datalist>
+            </fieldset>    
+
+          </div>
+
+          <div class="subject">
+            <h1>Writing</h1>
+              <h3>Effort: {{ writing_effort_label }}</h3>
+              <p> {{reports.writing_comment }}</p>
+          
+            <h2>Transcript</h2>
+            <fieldset>
+              <input type="range" min="1" max="5" step="1" value="{{ reports.writing_tran }}" class="slider" list="step-list-i" name="transcript-range">
+                <datalist id="step-list-i">
+                  <option value="1" label="1"></option>
+                  <option value="2" label="2"></option>
+                  <option value="3" label="3"></option>
+                  <option value="4" label="4"></option>
+                  <option value="5" label="5"></option>
+                </datalist>
+            </fieldset>
+        
+            <h2>Composition</h2>
+            <fieldset>
+              <input type="range" min="1" max="5" step="1" value="{{ reports.writing_comp }}" class="slider" list="step-list-j" name="composition-range">
+                <datalist id="step-list-j">
+                  <option value="1" label="1"></option>
+                  <option value="2" label="2"></option>
+                  <option value="3" label="3"></option>
+                  <option value="4" label="4"></option>
+                  <option value="5" label="5"></option>
+                </datalist>
+            </fieldset>
+        
+            <h2>Writing Process</h2>
+              <fieldset>
+                <input type="range" min="1" max="5" step="1" value="{{ reports.writing_proc }}" class="slider" value="1" list="step-list-k" name="writing-process-range">
+                  <datalist id="step-list-k">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                  </datalist>
+              </fieldset>    
+          </div>
+
+          <div class="subject">
+            <h1>Maths</h1>
+              <h3>Effort: {{ maths_effort_label }}</h3>
+              <p> {{ reports.maths_comment }}</p>
+          
+            <fieldset>
+              <h2>Measurement</h2>
+                <input type="range" min="1" max="5" step="1" value="{{ reports.maths_meas }}" class="slider" list="step-list-a" name="measurment-range">
+                  <datalist id="step-list-a">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                  </datalist>
+            </fieldset>
+           
+            <fieldset>
+              <h2>Algebra</h2> 
+                <input type="range" min="1" max="5" step="1" value="{{ reports.maths_alge }}" class="slider" list="step-list-b" name="algebra-range">
+                  <datalist id="step-list-b">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                  </datalist>
+            </fieldset> 
+          
+            <fieldset>
+              <h2>Number</h2>
+                <input type="range" min="1" max="5" step="1" value="{{ reports.maths_numb }}" class="slider" list="step-list-c" name="number-range">
+                  <datalist id="step-list-c">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                  </datalist> 
+            </fieldset>
+
+            <fieldset>
+              <h2>Geometry</h2> 
+                <input type="range" min="1" max="5" step="1" value="{{ reports.maths_geom }}" class="slider" list="step-list-d" name="geometry-range">
+                  <datalist id="step-list-d">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                  </datalist>
+            </fieldset>
+        
+            <fieldset>
+              <h2>Statistics</h2>
+                  <input type="range" min="1" max="5" step="1" value="{{ reports.maths_stat }}" class="slider" list="step-list-e" name="statistics-range">
+                    <datalist id="step-list-e">
+                      <option value="1" label="1"></option>
+                      <option value="2" label="2"></option>
+                      <option value="3" label="3"></option>
+                      <option value="4" label="4"></option>
+                      <option value="5" label="5"></option>
+                    </datalist>
+            </fieldset>
+      </div>
+    
+  </section>
+  
+
+{% endblock %}
+

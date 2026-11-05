@@ -39,7 +39,7 @@
         {% for report in reports %}
           {% if report.term == term %}
 
-            <a href="" id="report-view-btn">View Report</a>
+            <a href="/student-info/{{ student.id }}/report-form/{{ term }}/report" id="report-view-btn">View Report</a>
 
              <a type="button" href="/student-info/{{ student.id }}/report-form/{{ term }}/edit" class="edit-btn">Edit</a>
 

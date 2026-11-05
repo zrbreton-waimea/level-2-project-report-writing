@@ -5,6 +5,7 @@
 
 :root {
     --text: #ecebea;
+    --text-print: 000;
     --background: #100c0a;
     --primary: #e0af9e;
     --secondary: #9c3c16;
@@ -319,7 +320,7 @@ main > h2 {
     }
 
     #divider{
-        height: 4px;
+        height: 0.2rem;
         width: 16rem;
         border-radius: 5rem;
         background-color: #555;
@@ -414,5 +415,71 @@ form {
     display: flex;
     justify-content: center;
     padding: 1rem;
+    }
+}
+
+/* Report View Page */
+.student-report{
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    
+    #term-header{
+        padding: 1rem;
+    }
+
+    .student-data{
+        text-align: center;
+    }
+
+    #divider{
+        height: 0.2rem;
+        width: 16rem;
+        border-radius: 5rem;
+        background-color: #555;
+        justify-self: center;
+    }
+
+    .key{
+        margin: 1rem;
+    }
+
+    datalist{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    fieldset{
+        border: none;
+    }
+
+    input {
+        width: 100%;
+        accent-color: var(--accent);
+        pointer-events: none;
+    }
+
+    .subject{
+        background-color: var(--dark-secondary);
+        border-radius: 1rem;
+        border: solid 2px var(--text);
+        margin: 1rem;
+        padding: 1rem;
+
+        h1{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+/* --- Print Styles --- */
+@media print{
+    .student-report{
+        color: black;
+       
     }
 }

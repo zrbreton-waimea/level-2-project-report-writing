@@ -7,11 +7,33 @@
 
 {% block content %}
   <header>
-    <h1> Import Student Data </h1>
+    <nav>
+      <div class="back-btn">
+        <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+      </div>
+      <h1> Import Students </h1>
+    </nav>
   </header>
 
+
     <section id="import">
-    
+
+    <form>
+      <div class="text-input">
+        <legend>Student ID</legend>
+        <text type="text" name="student-import"></textarea>
+      </div>
+
+      <div class="text-input">
+        <legend>Add Students</legend>
+        <textarea type="text" name="student-import"></textarea>
+      </div>
+
+      <div class="text-input">
+            <legend>Add Students</legend>
+            <textarea type="text" name="student-import"></textarea>
+          </div>
+    </form>
     </section>
 
 {% endblock %}

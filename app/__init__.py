@@ -524,6 +524,51 @@ def post_report_form_4_edit(id, term):
     flash(f"Successfully edited report for student {id}, for term {term}!", "success")
     return redirect(f"/student-info/{id}",)
 
+#=============================================================================================
+# Report View - Allows the user to view the final report for the desired term
+#=============================================================================================
+@app.get("/student-info/<id>/report-form/<term>/report")
+def render_report(id, term):
+
+    with connect_db() as db:
+            sql = """
+                SELECT id, name
+                FROM students
+                WHERE id = ? 
+            """
+            params = (id,)
+            student = db.execute(sql, params).fetchone()
+    
+            sql = """
+                SELECT term
+                FROM reports
+                WHERE student_id = ? AND term == ?
+            """
+            params = (id, term)
+            reports = db.execute(sql, params).fetchall()
+
+            sql = """
+                SELECT maths_meas,  maths_alge, maths_numb, maths_geom, maths_stat, maths_effort, 
+                maths_comment, reading_reco, reading_comp, reading_crit, reading_effort, reading_comment, 
+                writing_tran, writing_comp, writing_proc, writing_effort, writing_comment, behaviour_comment
+                FROM reports
+                WHERE student_id = ? AND term == ?
+                
+            """
+
+            params = (id, term)
+            reports = db.execute(sql, params).fetchone()
+
+            reading_effort = reports["reading_effort"]
+            reading_effort_label = "Consistent" if reading_effort == 1 else "Not consistent"
+
+            writing_effort = reports["writing_effort"]
+            writing_effort_label = "Consistent" if writing_effort == 1 else "Not consistent"
+
+            maths_effort = reports["writing_effort"]
+            maths_effort_label = "Consistent" if maths_effort == 1 else "Not consistent"
+
+    return render_template("pages/student-report.jinja", student=student, reports=reports, term=term, reading_effort_label=reading_effort_label, writing_effort_label=writing_effort_label, maths_effort_label=maths_effort_label)
 
 #===========================================================
 # Configure the app
