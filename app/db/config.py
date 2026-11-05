@@ -58,15 +58,15 @@ class reports:
             reading_comp       INTEGER,
             reading_crit       INTEGER,
             reading_effort     INTEGER,
-            reading_comment    TEXT NOT NULL,
+            reading_comment    TEXT,
 
             writing_tran       INTEGER,
             writing_comp       INTEGER,
             writing_proc       INTEGER,
             writing_effort     INTEGER ,
-            writing_comment    TEXT NOT NULL,
+            writing_comment    TEXT,
 
-            behaviour_comment  TEXT NOT NULL
+            behaviour_comment  TEXT
         )
     """
 

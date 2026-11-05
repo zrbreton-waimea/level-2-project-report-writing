@@ -475,6 +475,14 @@ form {
     }
 }
 
+#add-student-form{
+    margin: 5rem 0 ;
+    padding: 2rem;
+    justify-self: center;
+    background-color: var(--dark-secondary);
+    border-radius: 1rem;
+    border: solid 2px var(--text);
+}
 
 /* --- Print Styles --- */
 @media print{

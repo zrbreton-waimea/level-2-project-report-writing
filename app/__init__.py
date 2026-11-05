@@ -29,11 +29,36 @@ def show_notes():
         return render_template("pages/index.jinja")
 
 #===========================================================
-# Import - Shows a text box for easy pasting 
+# Import - Shows text boxes to add student
 #===========================================================
-@app.get("/import-data")
-def import_data():   
- return render_template("pages/import-data.jinja")
+@app.get("/add-student")
+def add_student():
+  
+    return render_template("pages/add-student.jinja")
+
+    
+
+#===========================================================
+# Import - Shows text boxes to add student
+#===========================================================
+@app.post("/add-student")
+def render_add_student():
+
+    student_id = request.form.get("student-id-import")
+    name = request.form.get("student-name-import")
+
+    with connect_db() as db:
+        db.execute(
+            "INSERT INTO students (id, name) VALUES (?, ?)",
+            (student_id, name),
+        )
+        db.execute(
+            "INSERT INTO reports (student_id) VALUES (?)",
+            (student_id,),
+        )
+
+    flash("Student added!", "success")
+    return redirect("/add-student")
 
 #===========================================================
 # Class List - Shows students in the class

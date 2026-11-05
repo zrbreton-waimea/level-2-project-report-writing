@@ -1,0 +1,38 @@
+{#=====================================================
+  Home page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+  <header>
+    <nav>
+      <div class="back-btn">
+        <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+      </div>
+      <h1> Import Students </h1>
+    </nav>
+  </header>
+
+
+    <section id="add-student-form">
+
+      <form method="post">
+        <div class="text-input">
+          <legend>Student ID</legend>
+          <input type="text" name="student-id-import">
+        </div>
+
+        <div class="text-input">
+          <legend>Full Name</legend>
+          <input type="text" name="student-name-import">
+        </div>
+
+        <button>Add</button>
+
+      </form>
+    </section>
+
+{% endblock %}
+
