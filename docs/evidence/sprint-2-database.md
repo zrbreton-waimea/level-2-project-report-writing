@@ -27,12 +27,12 @@ I am testing whether the seed data I added into the data bases were accessable a
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
 
-![report-preview-test](image-4.png)
+![report-preview-test](screenshots/image-4.png)
 
 ### Changes / Improvements
 
 After a discussion with my stakeholder, he asked the question "How will I be able to pick a student from the class list to view there report?" - Gareth 
-This made me realise that there is a massive flaw in the system, the user cannot look back on reports or students in general which destroys the point of saving student data in a database. 
+This made me realise that there is a massive flaw in the system. The user cannot look back on reports or students as the ID isn't being stored anywhere accessable to call. This should be changed so that the student's id is stored in the URL so the database knows which information to show for the correct stduent.
 
 "Could you have a page where all of my students are showed, so I can select which student I want to create a report for?" - Gareth
 Further discussion with my stakeholder revealed that it would be a much better idea to have a class list page with a list of students that show their name and student ID
@@ -40,8 +40,8 @@ Further discussion with my stakeholder revealed that it would be a much better i
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 
 Here is the UI mock up:
-![class-room-page-penpot](image-5.png)
 
+![classroom-pentpot-page](screenshots/image-5.png)
 
 ## Test 2 - Class Room Page
 
@@ -49,13 +49,14 @@ I will be testing whether the class room page displays the student name and stud
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
 
-![class-room-page](<Screenshot 2026-10-27 144131.png>)
+![class-room-page](<screenshots/Screenshot 2026-10-27 144131.png>)
+
 ### Changes / Improvements
 
 "Can the students be ordered in Alphabetical order?" - Gareth 
 I will sort the students names A to Z and display them in this order.
 
-![names-alphabetical-order](image-6.png)
+![names-in-alphabetical-order](screenshots/image-6.png)
 
 "What term does the plus button bring you to?" - Gareth 
 The plus button was the original link to the term selection page, for clearity I will remove the plus button and replace it by making the student's container a link itself.
