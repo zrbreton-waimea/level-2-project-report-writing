@@ -27,17 +27,25 @@ I will test this by going through and filling out the form for a seeded student,
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
 
-![alt text](screenshots/student-term-report-1.gif)
+![report-from](screenshots/student-term-report-form.gif)
 
 ### Changes / Improvements
 
 Gareth - "To make it easier to see the postion of the sliders, can there be numbers underneath each slider to represent each notch? Also can there be a key to show what each number represents as a performance indicator?" 
 
+I also realised that the comments for each subject can be left blank, I will create an error prevention system to prevent them from being empty fields within the report. 
+
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 
-![report-form](screenshots/student-term-report.gif)
+### First Change
+
+![report-form-improved](screenshots/student-term-report-form-improved.gif)
 
 I added numbers underneath each slider as well as a key to allow for better comprehension of what they represent in the report.
+
+### Second Change
+
+
 
 
 ## Testing Editing a Student's Term Report
@@ -77,8 +85,20 @@ I will test the page where you are able to add a student to the class list.
 
 ![add-student](screenshots/add-student.gif)
 
+While testing I accidentally entered the same name for a second time, this returned a server error which showed "unique contraint failed". This made me realize that if a teacher enters the same name on accident it will throw an error. On the same token, if the user enters nothing and presses add it will add a blank name and student ID to the table, as shown below. A flow on error from this is that since the entry technically doesn't exist, the ghost student cannot be removed.
+
+![add-student-no-entry](screenshots/add-student-no-entry.gif)
+
+### Changes / Improvements
+
+To prevent these errors from appearing, I made two if statements, one that checks whether a student already exists with the student ID that was entered as well as another that checks if the input is blank. If those are met, then a error flash message is showed.
+
+![add-student-improvement](screenshots/add-student-improvement.gif)
+
 
 ## Sprint Review
+
+The project has moved forward through the feedback from my stakeholder as well as thorough testing that surfaced some bugs. This allowed me to fix these bugs and improved the overall useability of my system. It also helped me learn further about creating error checking if statements. 
 
 Replace this text with a statement about how the sprint has moved the project forward - key success point, any things that didn't go so well, etc.
 

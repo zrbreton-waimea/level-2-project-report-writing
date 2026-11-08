@@ -42,37 +42,41 @@ def add_student():
 # Import - Shows text boxes to add student
 #===========================================================
 @app.post("/add-student")
-def render_add_student(id):
+def render_add_student():
 
-    student_id = request.form.get("student-id-import")
-    name = request.form.get("student-name-import")
+    student_id_entry = request.form.get("student-id-import")
+    name_entry = request.form.get("student-name-import")
+
+    if not student_id_entry or not name_entry:
+        flash("Please enter a student ID or name to add to the class list.", "error")
+        return redirect("/add-student")
 
     with connect_db() as db:
                 sql = """
-                    SELECT id, name
+                    SELECT id
                     FROM students
-                    WHERE id = ?
+                    WHERE id = ? 
                 """
-                params = (id, )
+                params = (student_id_entry,)
                 student = db.execute(sql, params).fetchone()
 
-    if student_id == id or name == student.name:  
-        flash("You cannot add a student with the same ID and name as another student", "error")
-        return redirect("/add-student", student=student)
+    if student is not None:
+        flash("A student with the same ID already exists. Enter a different ID.", "error")
+        return redirect("/add-student")
 
-    else:
-        with connect_db() as db:
-            db.execute(
-                "INSERT INTO students (id, name) VALUES (?, ?)",
-                (student_id, name),
-            )
-            db.execute(
-                "INSERT INTO reports (student_id) VALUES (?)",
-                (student_id,),
-            )
 
-        flash("Student added!", "success")
-        return redirect("/add-student", student=student)
+    with connect_db() as db:
+        db.execute(
+            "INSERT INTO students (id, name) VALUES (?, ?)",
+            (student_id_entry, name_entry),
+        )
+        db.execute(
+            "INSERT INTO reports (student_id) VALUES (?)",
+            (student_id_entry,)
+        )
+
+    flash("Student added!", "success")
+    return redirect("/add-student",)
 
 #===========================================================
 # Class List - Shows students in the class
