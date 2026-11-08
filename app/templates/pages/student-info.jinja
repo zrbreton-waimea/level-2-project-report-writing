@@ -9,7 +9,7 @@
   <header>
     <nav>
       <div class="back-btn">
-        <a href="/class-room"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+        <a href="/class-room" aria-label="back button"><img src="/static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
       </div>
       <h1> Student Info </h1>
     </nav>
@@ -24,7 +24,7 @@
     </div>  
 
     <div class="delete-btn">
-      <a href="/student-info/{{ student.id }}/delete"><img src="/static/images/trash.svg" alt="back-button-icon"></a>
+      <a href="/student-info/{{ student.id }}/delete" aria-label="delete button"><img src="/static/images/trash.svg" alt="back-button-icon"></a>
     </div>
 
     <div class="terms">
@@ -39,9 +39,9 @@
         {% for report in reports %}
           {% if report.term == term %}
 
-            <a href="/student-info/{{ student.id }}/report-form/{{ term }}/report" id="report-view-btn">View Report</a>
+            <a href="/student-info/{{ student.id }}/report-form/{{ term }}/report" class="report-view-btn">View Report <img src="/static/images/file.svg" alt="file-icon"></a>
 
-             <a type="button" href="/student-info/{{ student.id }}/report-form/{{ term }}/edit" class="edit-btn">Edit</a>
+             <a type="button" href="/student-info/{{ student.id }}/report-form/{{ term }}/edit" class="edit-btn">Edit <img src="/static/images/pencil-line.svg" alt="pencil-icon"></a>
 
               {% set ns.report_found = true %}
             </div>
@@ -53,7 +53,6 @@
                     <a href="/student-info/{{ student.id }}/report-form/{{ term }}"><img src="/static/images/circle-plus.svg" alt="add-button-icon"></a>
             </div>
           {% endif%}
-
       </div>
     {% endfor %}
   </section>

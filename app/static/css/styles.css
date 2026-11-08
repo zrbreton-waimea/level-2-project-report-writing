@@ -5,9 +5,10 @@
 
 :root {
     --text: #ecebea;
+    --text-dark: #292929;
     --text-print: 000;
     --background: #100c0a;
-    --primary: #e0af9e;
+    --primary: #c67b62;
     --secondary: #9c3c16;
     --accent: #fe5410;
     --accent-faded: color-mix(in srgb, var(--accent) 50%, transparent);
@@ -16,8 +17,8 @@
     --light-secondary: color-mix(in srgb, var(--secondary)70%, white);
 
     --button-outline: color-mix(in srgb, var(--secondary)60%, white);
-
     --button-scale: 2rem;
+    --button-background: hsl(0deg 0% 100% / 0.1);
 }
 
 
@@ -41,7 +42,7 @@ main {
     .add-btn{
         border-radius: 100%;
         backdrop-filter: blur(16px);
-        background: hsl(0deg 0% 100% / 0.1);
+        background-color: var(--button-background);
 
         height: var(--button-scale);
         width: var(--button-scale);
@@ -73,7 +74,8 @@ nav{
         margin: 1rem;
         border-radius: 100%;
         backdrop-filter: blur(16px);
-        background: hsl(0deg 0% 100% / 0.1);
+        background: var(--button-background);
+        transition: 0.3s ease;
         width: var(--button-scale);
         height: var(--button-scale);
 
@@ -81,6 +83,11 @@ nav{
             width: var(--button-scale);
             height: var(--button-scale); 
         }
+    }
+
+    .back-btn:hover{
+        background: var(--accent);
+        transition: 0.3s ease;
     }
 }
 
@@ -120,13 +127,13 @@ main > h2 {
     #class-room{
         font-weight: 700;
         backdrop-filter: blur(16px);
-        background: hsl(0deg 0% 100% / 0.1); 
+        background: var(--button-background); 
     }
 
     #import{
        font-weight: 400;
        backdrop-filter: blur(16px);
-       background: hsl(0deg 0% 100% / 0.1); 
+       background: var(--button-background); 
     }
 
     /* Button hover animation */
@@ -262,7 +269,6 @@ main > h2 {
             width: 4px;
             border-radius: 5rem;
             background-color: #555;
-            
         }
     } 
 }
@@ -275,7 +281,8 @@ main > h2 {
         margin: 1rem auto;
         border-radius: 100%;
         backdrop-filter: blur(16px);
-        background: hsl(0deg 0% 100% / 0.1);
+        transition: 0.3s ease;
+        background: var(--button-background);
         border: 2px solid var(--text);
 
         height: var(--button-scale);
@@ -290,11 +297,67 @@ main > h2 {
             padding: 0.3rem;
         }    
     }
+
+    .delete-btn:hover{
+        background-color: var(--accent);
+        transition: 0.3s ease;
+    }
     
     .add-btn{
         margin: 0.5rem;
         align-self: end;
     }
+
+    .report-view-btn{
+        display: flex;
+        flex-direction: row;
+        color: var(--text);
+        text-decoration: none;
+        background-color: var(--primary);
+        transition: ease 0.3s;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+        border: 2px solid var(--text);
+
+        img{
+            width: 1.2rem;
+            height: 1.2rem;
+            justify-self: center;
+            align-self: center;
+            margin: 0.2rem;
+        }
+    }
+
+    .report-view-btn:hover{
+        background-color: var(--accent);
+        transition: ease 0.3s;
+    }
+
+    .edit-btn{
+        display: flex;
+        flex-direction: row;
+        color: var(--text);
+        text-decoration: none;
+        background-color: var(--secondary);
+        transition: ease 0.3s;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+        border: 2px solid var(--text);
+
+        img{
+            width: 1.2rem;
+            height: 1.2rem;
+            justify-self: center;
+            align-self: center;
+            margin: 0.2rem;
+        }
+    }
+
+    .edit-btn:hover{
+        background-color: var(--accent);
+        transition: ease 0.3s;
+    }
+
     .student-data{
         text-align: center;
         margin: 1rem;
@@ -488,6 +551,5 @@ form {
 @media print{
     .student-report{
         color: black;
-       
     }
 }

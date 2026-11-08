@@ -1,5 +1,5 @@
 {#=====================================================
-  Home page
+  Add Student Page
 =====================================================#}
 
 {% extends 'pages/_base.jinja' %}
@@ -9,9 +9,9 @@
   <header>
     <nav>
       <div class="back-btn">
-        <a href="/"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
+        <a href="/" aria-label="back button"><img src="static/images/circle-arrow-left.svg" alt="back-button-icon"></a>
       </div>
-      <h1> Import Students </h1>
+      <h1> Add Student </h1>
     </nav>
   </header>
 
@@ -19,15 +19,15 @@
     <section id="add-student-form">
 
       <form method="post">
-        <div class="text-input">
+        <fieldset class="text-input">
           <legend>Student ID</legend>
           <input type="text" name="student-id-import">
-        </div>
+        </fieldset>
 
-        <div class="text-input">
+        <fieldset class="text-input">
           <legend>Full Name</legend>
           <input type="text" name="student-name-import">
-        </div>
+        </fieldset>
 
         <button>Add</button>
 
