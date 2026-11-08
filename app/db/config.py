@@ -52,21 +52,21 @@ class reports:
             maths_geom         INTEGER,
             maths_stat         INTEGER,
             maths_effort       INTEGER,
-            maths_comment      TEXT,
+            maths_comment      TEXT NOT NULL,
 
             reading_reco       INTEGER,
             reading_comp       INTEGER,
             reading_crit       INTEGER,
             reading_effort     INTEGER,
-            reading_comment    TEXT,
+            reading_comment    TEXT NOT NULL,
 
             writing_tran       INTEGER,
             writing_comp       INTEGER,
             writing_proc       INTEGER,
             writing_effort     INTEGER ,
-            writing_comment    TEXT,
+            writing_comment    TEXT NOT NULL,
 
-            behaviour_comment  TEXT
+            behaviour_comment  TEXT NOT NULL
         )
     """
 

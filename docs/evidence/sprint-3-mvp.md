@@ -39,13 +39,15 @@ I also realised that the comments for each subject can be left blank, I will cre
 
 ### First Change
 
-![report-form-improved](screenshots/student-term-report-form-improved.gif)
+![report-form-improvment-1](screenshots/student-term-report-form-improved-1.gif)
 
 I added numbers underneath each slider as well as a key to allow for better comprehension of what they represent in the report.
 
 ### Second Change
 
+![report-form-improvment-2](screenshots/student-term-report-form-improved-2.gif)
 
+I added a check to make sure that the comment fields are being filled to prevent empty fields in the final report. The check was done through an if statement that made sure that every comment field had text within it.
 
 
 ## Testing Editing a Student's Term Report
