@@ -42,23 +42,37 @@ def add_student():
 # Import - Shows text boxes to add student
 #===========================================================
 @app.post("/add-student")
-def render_add_student():
+def render_add_student(id):
 
     student_id = request.form.get("student-id-import")
     name = request.form.get("student-name-import")
 
     with connect_db() as db:
-        db.execute(
-            "INSERT INTO students (id, name) VALUES (?, ?)",
-            (student_id, name),
-        )
-        db.execute(
-            "INSERT INTO reports (student_id) VALUES (?)",
-            (student_id,),
-        )
+                sql = """
+                    SELECT id, name
+                    FROM students
+                    WHERE id = ?
+                """
+                params = (id, )
+                student = db.execute(sql, params).fetchone()
 
-    flash("Student added!", "success")
-    return redirect("/add-student")
+    if student_id == id or name == student.name:  
+        flash("You cannot add a student with the same ID and name as another student", "error")
+        return redirect("/add-student", student=student)
+
+    else:
+        with connect_db() as db:
+            db.execute(
+                "INSERT INTO students (id, name) VALUES (?, ?)",
+                (student_id, name),
+            )
+            db.execute(
+                "INSERT INTO reports (student_id) VALUES (?)",
+                (student_id,),
+            )
+
+        flash("Student added!", "success")
+        return redirect("/add-student", student=student)
 
 #===========================================================
 # Class List - Shows students in the class
@@ -101,7 +115,6 @@ def show_student_info(id):
             """
             params = (id, )
             reports = db.execute(sql, params).fetchall()
-    print(student)
     return render_template("pages/student-info.jinja", student=student, reports=reports)
 
 #=================================================================
