@@ -47,6 +47,7 @@ def render_add_student():
     student_id_entry = request.form.get("student-id-import")
     name_entry = request.form.get("student-name-import")
 
+    # checks whether the input from the form is blank
     if not student_id_entry or not name_entry:
         flash("Please enter a student ID or name to add to the class list.", "error")
         return redirect("/add-student")
@@ -60,6 +61,7 @@ def render_add_student():
                 params = (student_id_entry,)
                 student = db.execute(sql, params).fetchone()
 
+    # checks whether the student name entered already exists within the data base
     if student is not None:
         flash("A student with the same ID already exists. Enter a different ID.", "error")
         return redirect("/add-student")
@@ -281,6 +283,11 @@ def post_report_form_4(id, term):
     maths_effort =          session["maths_effort"]
     maths_comment =         request.form.get("math-text")
 
+    # checks whether maths comment is blank
+    if not maths_comment:
+        flash("Please enter a comment for maths.", "error")
+        return redirect(f"/student-info/{id}/report-form/{term}/4")
+
 
     reading_recognition =   session["reading_recognition"]
     reading_comprehension = session["reading_comprehension"]
@@ -288,13 +295,28 @@ def post_report_form_4(id, term):
     reading_effort =        session["reading_effort"]
     reading_comment =       request.form.get("reading-text")
 
+    # checks whether reading comment is blank
+    if not reading_comment:
+        flash("Please enter a comment for reading.", "error")
+        return redirect(f"/student-info/{id}/report-form/{term}/4")
+
     writing_transcript =    session["writing_transcript"]
     writing_composition =   session["writing_composition"]
     writing_process =       session["writing_process"]
     writing_effort =        session["writing_effort"]
     writing_comment =       request.form.get("writing-text")
 
+    # checks whether writing comment is blank
+    if not writing_comment:
+        flash("Please enter a comment for writing.", "error")
+        return redirect(f"/student-info/{id}/report-form/{term}/4")
+          
     behaviour_comment =     request.form.get("behaviour-text")
+
+    # checks whether behaviour comment is blank
+    if not behaviour_comment:
+        flash("Please enter a comment for writing.", "error")
+        return redirect(f"/student-info/{id}/report-form/{term}/4")
 
     student_id = id
     term_number = term
