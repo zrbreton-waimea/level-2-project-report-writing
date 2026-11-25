@@ -59,19 +59,19 @@ Let me know if you need anything more.
 
 ## First Database Design
 
-There will be three tables this will allow for the most modular design flexibility. There will be a one to many relationship going from the reports table to the students table.
+There will be four tables this will allow for the most modular design flexibility. There will be a one to many relationship going from the reports table to the students table.
 
-![db-design-v1](image.png)
+![db-design-v1](screenshots/image-3.png)
 
 ## Second Database Iteration
-I have edited the database design to better catter to being more compadible for the report writing structure that was requested/needed for my stakeholder. 
+I have edited the database design to better catter to being more compadible for the report writing structure that was requested/needed for my stakeholder. I also realized that I didn't need the rating table.
 
-![db-design-v2](image-3.png)
+![db-design-v2](screenshots/image.png)
 
 ## Example of final report generated
 The goal is for the generator to spit out something similar to the structure of the following report exemplar.
 
-https://mail.google.com/mail/u/0?ui=2&ik=18e708f3c5&attid=0.1&permmsgid=msg-f:1874992101179489727&th=1a054f61c3777dbf&view=att&disp=safe&realattid=f_mtgfh0630&zw
+[~ Example Report ~](<attachments/Sample Primary School Report-1.pdf>)
 
 
 
@@ -96,9 +96,9 @@ The first stage of prototyping was to explore how the UI might 'flow' between st
 
 This Figma demo shows the initial design for the UI 'flow':
 
-![first-flow](image-1.png)
+![first-flow](screenshots/image-1.png)
 
-Here is the share link: https://design.penpot.app/#/view?file-id=6f06cb60-262a-804c-8008-6c68101502e2&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fde098ffcfd
+[Here is the share link:](https://design.penpot.app/#/view?file-id=6f06cb60-262a-804c-8008-6c68101502e2&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fde098ffcfd)
 
 
 ### Testing
@@ -109,15 +109,15 @@ My stakeholder said that it would be good to have a way to import students in on
 
 I added a way to bulk add students names' and ID's to streamline the experience.
 
-![second-flow](image-2.png)
+![second-flow](screenshots/image-2.png)
 
-Here is the share link: https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750
+[Here is the share link:](https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750)
 
 ## Initial UI Prototype
 
 The next stage of prototyping was to develop the layout for each screen of the UI.
 
-https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750
+[Here is the share link:](https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750)
 
 This Figma demo shows the initial layout design for the UI:
 
@@ -130,7 +130,7 @@ My stakeholder tested/went through each page that would require user input to ge
 
 I only made one adjustment which was to add the final page of the process where the final report will appear which is where the user will be able to tweak/edit it.
 
-https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750
+[Here is the share link:](https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750)
 
 
 
@@ -140,17 +140,17 @@ Having established the layout of the UI screens, the prototype was refined visua
 
 I gave my stakeholder the following three colour options:
 
-Color Scheme 1 - https://www.realtimecolors.com/?colors=ecebea-100c0a-e0af9e-9c3c16-fe5410&fonts=Inter-Inter
+[Color Scheme 1](https://www.realtimecolors.com/?colors=ecebea-100c0a-e0af9e-9c3c16-fe5410&fonts=Inter-Inter)
 
-Color Scheme 2 - https://www.realtimecolors.com/?colors=d7f7d7-031003-8ae688-1b814f-31d4aa&fonts=Inter-Inter
+[Color Scheme 2](https://www.realtimecolors.com/?colors=d7f7d7-031003-8ae688-1b814f-31d4aa&fonts=Inter-Inter)
 
-Color Scheme 3 - https://www.realtimecolors.com/?colors=efedeb-0d0c0b-c2bbb3-4e5f4d-76907e&fonts=Inter-Inter
+[Color Scheme 3](https://www.realtimecolors.com/?colors=efedeb-0d0c0b-c2bbb3-4e5f4d-76907e&fonts=Inter-Inter)
 
 Dad - "I can tell you what I like best about colour scheme 1. Lettering is easy to read against the warm colours."
 
 This Figma demo shows the UI with refinements applied:
 
-https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&zoom=fit&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750
+[~ Final Flow ~](https://design.penpot.app/#/view?file-id=3be9e5e1-190f-8090-8008-7e77b45a93c3&page-id=6f06cb60-262a-804c-8008-6c68101502e3&section=interactions&index=0&zoom=fit&share-id=3be9e5e1-190f-8090-8008-7fe2f4382750)
 
 ### Testing
 
